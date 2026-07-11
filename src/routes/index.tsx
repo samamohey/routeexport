@@ -7,6 +7,36 @@ import factory from "@/assets/factory-2.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Egyptian Marble, Quartz & Stone Exporter | Nile Stone Exports" },
+      {
+        name: "description",
+        content:
+          "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide.",
+      },
+      { property: "og:title", content: "Egyptian Marble, Quartz & Stone Exporter | Nile Stone Exports" },
+      {
+        property: "og:description",
+        content: "Marble alternatives, raw quartz, and engineered quartz slabs — exported from Egypt to 20+ countries.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://nile-exports.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Nile Stone Exports",
+          url: "https://nile-exports.lovable.app",
+          inLanguage: ["en", "ar"],
+        }),
+      },
+    ],
+  }),
   component: HomePage,
 });
 
@@ -50,7 +80,7 @@ function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroKitchen} alt="" className="h-full w-full object-cover opacity-30" />
+          <img src={heroKitchen} alt="Modern kitchen finished with Egyptian engineered quartz slabs" className="h-full w-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
         </div>
         <div className="container-x pt-24 pb-28 md:pt-36 md:pb-40">

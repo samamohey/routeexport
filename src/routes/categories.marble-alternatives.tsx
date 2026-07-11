@@ -18,11 +18,33 @@ type Product = {
 export const Route = createFileRoute("/categories/marble-alternatives")({
   head: () => ({
     meta: [
-      { title: "Marble Slab Alternatives — Nile Stone Exports" },
-      { name: "description", content: "Lightweight, moisture-resistant panels with luxurious marble finish. Egyptian export catalog with 60+ patterns." },
-      { property: "og:title", content: "Marble Slab Alternatives — Nile Stone Exports" },
-      { property: "og:description", content: "Marble-look panels engineered in Egypt for global projects." },
+      { title: "Marble Slab Alternative Panels from Egypt | Nile Stone Exports" },
+      {
+        name: "description",
+        content:
+          "Lightweight, moisture-resistant marble-look composite panels exported from Egypt. 60+ patterns, 1.22×2.80m, 3–6mm — ~1,200 pcs per 40' HC.",
+      },
+      { property: "og:title", content: "Marble Slab Alternative Panels from Egypt" },
+      { property: "og:description", content: "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects." },
+      { property: "og:type", content: "product" },
+      { property: "og:url", content: "https://nile-exports.lovable.app/categories/marble-alternatives" },
       { property: "og:image", content: "https://i0.wp.com/kayan-egy.net/wp-content/uploads/2025/06/61.png?fit=800%2C800&ssl=1" },
+    ],
+    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/marble-alternatives" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Marble Slab Alternative Panels",
+          category: "Building Materials",
+          brand: { "@type": "Brand", name: "Nile Stone Exports" },
+          countryOfOrigin: "EG",
+          description:
+            "Lightweight composite marble-look panels, 60+ patterns, 1.22×2.80m, 3–6mm thickness — exported from Egypt.",
+        }),
+      },
     ],
   }),
   component: MarblePage,

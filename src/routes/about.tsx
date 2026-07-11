@@ -7,11 +7,18 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Nile Stone Exports" },
-      { name: "description", content: "A registered Egyptian export house delivering premium building surfaces worldwide." },
-      { property: "og:title", content: "About — Nile Stone Exports" },
-      { property: "og:description", content: "Registered with the Egyptian Export Council. Curated Egyptian factories, transparent logistics." },
+      { title: "About Nile Stone Exports — Registered Egyptian Export House" },
+      {
+        name: "description",
+        content:
+          "Nile Stone Exports is a registered Egyptian trade house exporting marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics.",
+      },
+      { property: "og:title", content: "About Nile Stone Exports — Registered Egyptian Export House" },
+      { property: "og:description", content: "Registered with the Egyptian Export Council. Curated factories, transparent logistics, worldwide shipping." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://nile-exports.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/about" }],
   }),
   component: AboutPage,
 });
@@ -45,7 +52,7 @@ function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             src={factory}
-            alt="Egyptian factory"
+            alt="Egyptian stone factory floor operated by Nile Stone Exports partners"
             className="rounded-2xl aspect-[4/3] object-cover w-full"
           />
           <motion.img
@@ -54,7 +61,7 @@ function AboutPage() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ delay: 0.15 }}
             src={kitchen}
-            alt="Finished quartz surface"
+            alt="Finished Egyptian quartz surface installed on a kitchen countertop"
             className="rounded-2xl aspect-[4/3] object-cover w-full md:mt-16"
           />
         </div>

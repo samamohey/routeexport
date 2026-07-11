@@ -10,11 +10,32 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/categories/quartz-slabs")({
   head: () => ({
     meta: [
-      { title: "Quartz Slabs — EGY QUARTZ Collection" },
-      { name: "description", content: "Engineered quartz slabs for kitchens, floors, and cladding. Jumbo 330×165 cm and extra 310×152 cm. Polished & matte finishes." },
-      { property: "og:title", content: "EGY QUARTZ Slabs — Nile Stone Exports" },
-      { property: "og:description", content: "The original Egyptian quartz surface: 15/20/30 mm slabs in seamless sizes." },
-      { property: "og:image", content: "" },
+      { title: "Engineered Quartz Slabs from Egypt — EGY QUARTZ Collection | Nile Stone Exports" },
+      {
+        name: "description",
+        content:
+          "Egyptian engineered quartz slabs for countertops, floors, and cladding. Jumbo 330×165cm and 310×152cm. Thickness 15/20/30mm. Polished and matte finishes.",
+      },
+      { property: "og:title", content: "Engineered Quartz Slabs from Egypt — EGY QUARTZ" },
+      { property: "og:description", content: "The original Egyptian quartz surface: 15/20/30mm slabs in seamless jumbo sizes." },
+      { property: "og:type", content: "product" },
+      { property: "og:url", content: "https://nile-exports.lovable.app/categories/quartz-slabs" },
+    ],
+    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/quartz-slabs" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "EGY QUARTZ Engineered Slabs",
+          category: "Engineered Stone",
+          brand: { "@type": "Brand", name: "EGY QUARTZ" },
+          countryOfOrigin: "EG",
+          description:
+            "Engineered quartz slabs made in Egypt, over 90% natural quartz mineral. Standard 327×161cm, jumbo 330×165cm, extra 310×152cm; 15/20/30mm.",
+        }),
+      },
     ],
   }),
   component: QuartzSlabsPage,

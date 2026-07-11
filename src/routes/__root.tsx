@@ -70,13 +70,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Nile Stone Exports — Premium Egyptian Building Surfaces" },
-      { name: "description", content: "Verified Egyptian exporter of marble slab alternatives, raw quartz aggregate, and engineered quartz slabs. Registered with the Egyptian Export Council." },
       { name: "author", content: "Nile Stone Exports" },
-      { property: "og:title", content: "Nile Stone Exports — Premium Egyptian Building Surfaces" },
-      { property: "og:description", content: "Marble slab alternatives, raw quartz, and quartz slabs — exported from Egypt worldwide." },
+      { property: "og:site_name", content: "Nile Stone Exports" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#0B0B0B" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -84,6 +82,36 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Tajawal:wght@400;500;700&display=swap" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "alternate", hrefLang: "en", href: "https://nile-exports.lovable.app/" },
+      { rel: "alternate", hrefLang: "ar", href: "https://nile-exports.lovable.app/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://nile-exports.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Nile Stone Exports",
+          url: "https://nile-exports.lovable.app",
+          logo: "https://nile-exports.lovable.app/favicon.ico",
+          description:
+            "Registered Egyptian export house for marble slab alternatives, raw quartz, and engineered quartz slabs.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Ain Sokhna",
+            addressRegion: "Suez",
+            addressCountry: "EG",
+          },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "sales",
+            email: "export@nilestone.example",
+            telephone: "+20-155-996-7556",
+            availableLanguage: ["en", "ar"],
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
