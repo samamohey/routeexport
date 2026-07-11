@@ -40,7 +40,7 @@ function MarblePage() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["marble-products"],
     queryFn: async () => {
-      const res = await fetch("/api/marble-products?per_page=60");
+      const res = await fetch("/api/public/marble-products?per_page=60");
       if (!res.ok) throw new Error("Failed to load");
       return (await res.json()) as Product[];
     },
