@@ -16,7 +16,7 @@ import { Route as CategoriesIndexRouteImport } from './routes/categories.index'
 import { Route as CategoriesRawQuartzRouteImport } from './routes/categories.raw-quartz'
 import { Route as CategoriesQuartzSlabsRouteImport } from './routes/categories.quartz-slabs'
 import { Route as CategoriesMarbleAlternativesRouteImport } from './routes/categories.marble-alternatives'
-import { Route as ApiMarbleProductsRouteImport } from './routes/api/marble-products'
+import { Route as ApiPublicMarbleProductsRouteImport } from './routes/api/public/marble-products'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -54,9 +54,9 @@ const CategoriesMarbleAlternativesRoute =
     path: '/categories/marble-alternatives',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ApiMarbleProductsRoute = ApiMarbleProductsRouteImport.update({
-  id: '/api/marble-products',
-  path: '/api/marble-products',
+const ApiPublicMarbleProductsRoute = ApiPublicMarbleProductsRouteImport.update({
+  id: '/api/public/marble-products',
+  path: '/api/public/marble-products',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -64,32 +64,32 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/api/marble-products': typeof ApiMarbleProductsRoute
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
   '/categories/': typeof CategoriesIndexRoute
+  '/api/public/marble-products': typeof ApiPublicMarbleProductsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/api/marble-products': typeof ApiMarbleProductsRoute
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
   '/categories': typeof CategoriesIndexRoute
+  '/api/public/marble-products': typeof ApiPublicMarbleProductsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/api/marble-products': typeof ApiMarbleProductsRoute
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
   '/categories/': typeof CategoriesIndexRoute
+  '/api/public/marble-products': typeof ApiPublicMarbleProductsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -97,42 +97,42 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/api/marble-products'
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
     | '/categories/'
+    | '/api/public/marble-products'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
-    | '/api/marble-products'
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
     | '/categories'
+    | '/api/public/marble-products'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
-    | '/api/marble-products'
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
     | '/categories/'
+    | '/api/public/marble-products'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  ApiMarbleProductsRoute: typeof ApiMarbleProductsRoute
   CategoriesMarbleAlternativesRoute: typeof CategoriesMarbleAlternativesRoute
   CategoriesQuartzSlabsRoute: typeof CategoriesQuartzSlabsRoute
   CategoriesRawQuartzRoute: typeof CategoriesRawQuartzRoute
   CategoriesIndexRoute: typeof CategoriesIndexRoute
+  ApiPublicMarbleProductsRoute: typeof ApiPublicMarbleProductsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -186,11 +186,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriesMarbleAlternativesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/marble-products': {
-      id: '/api/marble-products'
-      path: '/api/marble-products'
-      fullPath: '/api/marble-products'
-      preLoaderRoute: typeof ApiMarbleProductsRouteImport
+    '/api/public/marble-products': {
+      id: '/api/public/marble-products'
+      path: '/api/public/marble-products'
+      fullPath: '/api/public/marble-products'
+      preLoaderRoute: typeof ApiPublicMarbleProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -200,11 +200,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  ApiMarbleProductsRoute: ApiMarbleProductsRoute,
   CategoriesMarbleAlternativesRoute: CategoriesMarbleAlternativesRoute,
   CategoriesQuartzSlabsRoute: CategoriesQuartzSlabsRoute,
   CategoriesRawQuartzRoute: CategoriesRawQuartzRoute,
   CategoriesIndexRoute: CategoriesIndexRoute,
+  ApiPublicMarbleProductsRoute: ApiPublicMarbleProductsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
