@@ -7,10 +7,28 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Nile Stone Exports" },
-      { name: "description", content: "Contact Nile Stone Exports for quotes, samples, and shipping enquiries." },
-      { property: "og:title", content: "Contact — Nile Stone Exports" },
-      { property: "og:description", content: "Get in touch with our Egyptian export desk." },
+      { title: "Contact Nile Stone Exports — Request an Egyptian Stone Export Quote" },
+      {
+        name: "description",
+        content:
+          "Contact Nile Stone Exports for quotes, samples, container pricing, and shipping enquiries. Our Egyptian export desk replies within 24 hours in English and Arabic.",
+      },
+      { property: "og:title", content: "Contact Nile Stone Exports" },
+      { property: "og:description", content: "Request pricing, samples, and lead times for marble alternatives, raw quartz, and quartz slabs from Egypt." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://nile-exports.lovable.app/contact" },
+    ],
+    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact Nile Stone Exports",
+          url: "https://nile-exports.lovable.app/contact",
+        }),
+      },
     ],
   }),
   component: ContactPage,
