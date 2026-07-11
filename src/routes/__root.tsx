@@ -110,6 +110,7 @@ function RootComponent() {
           <SiteHeader />
           <main className="flex-1"><Outlet /></main>
           <SiteFooter />
+          <Toaster position="top-center" />
         </div>
       </I18nProvider>
     </QueryClientProvider>
