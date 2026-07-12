@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Egyptian Marble, Quartz & Stone Exporter | Nile Stone Exports" },
       {
         property: "og:description",
-        content: "Marble alternatives, raw quartz, and engineered quartz slabs — exported from Egypt to 20+ countries.",
+        content: "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://nile-exports.lovable.app/" },
