@@ -21,7 +21,7 @@ export function SiteHeader() {
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-full hairline-gold text-gradient-gold font-display text-lg">N</span>
           <div className="leading-tight">
             <div className="font-display text-lg tracking-wide">NILE STONE EXPORTS</div>
-            <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Egypt · Since 2019</div>
+            <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Egypt · Export House</div>
           </div>
         </Link>
 
