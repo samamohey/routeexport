@@ -112,7 +112,7 @@ function MarblePage() {
                 </span>
                 <span className="mt-6 text-xs uppercase tracking-[0.22em] text-gold">Factory Tour</span>
                 <span className="mt-2 font-display text-2xl">
-                  {isAr ? "شاهد المصنع الذي نصدّر منه" : "Inside our partner factory"}
+                  {isAr ? "شاهد خطوط الإنتاج" : "Inside our production lines"}
                 </span>
               </button>
             )}
@@ -165,11 +165,8 @@ function MarblePage() {
               {data.map((p, i) => {
                 const img = p.images?.[0]?.src;
                 return (
-                  <motion.a
+                  <motion.div
                     key={p.id}
-                    href={p.permalink}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -187,15 +184,12 @@ function MarblePage() {
                       )}
                     </div>
                     <div className="p-4">
-                      <div className="flex items-center justify-between gap-2">
-                        <div className="font-medium text-sm truncate">{p.name}</div>
-                        <ExternalLink className="h-3.5 w-3.5 text-muted-foreground group-hover:text-gold shrink-0" />
-                      </div>
+                      <div className="font-medium text-sm truncate">{p.name}</div>
                       <div className="mt-1 text-xs text-muted-foreground line-clamp-2">
                         {stripHtml(p.short_description)}
                       </div>
                     </div>
-                  </motion.a>
+                  </motion.div>
                 );
               })}
             </div>
