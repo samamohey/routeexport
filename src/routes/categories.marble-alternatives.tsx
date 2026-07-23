@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import { ExternalLink, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { useState } from "react";
 import factoryVideo from "@/assets/kayan-factory.mp4.asset.json";
 import { useI18n } from "@/lib/i18n";
@@ -9,7 +9,6 @@ import { useI18n } from "@/lib/i18n";
 type Product = {
   id: number;
   name: string;
-  permalink: string;
   short_description: string;
   sku: string;
   images: { src: string; alt: string }[];
@@ -28,7 +27,6 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
       { property: "og:description", content: "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects." },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://nile-exports.lovable.app/categories/marble-alternatives" },
-      { property: "og:image", content: "https://i0.wp.com/kayan-egy.net/wp-content/uploads/2025/06/61.png?fit=800%2C800&ssl=1" },
     ],
     links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/marble-alternatives" }],
     scripts: [
