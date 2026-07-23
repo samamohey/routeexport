@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import { ExternalLink, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { useState } from "react";
 import factoryVideo from "@/assets/kayan-factory.mp4.asset.json";
 import { useI18n } from "@/lib/i18n";
@@ -9,7 +9,6 @@ import { useI18n } from "@/lib/i18n";
 type Product = {
   id: number;
   name: string;
-  permalink: string;
   short_description: string;
   sku: string;
   images: { src: string; alt: string }[];
@@ -28,7 +27,6 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
       { property: "og:description", content: "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects." },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://nile-exports.lovable.app/categories/marble-alternatives" },
-      { property: "og:image", content: "https://i0.wp.com/kayan-egy.net/wp-content/uploads/2025/06/61.png?fit=800%2C800&ssl=1" },
     ],
     links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/marble-alternatives" }],
     scripts: [
@@ -114,7 +112,7 @@ function MarblePage() {
                 </span>
                 <span className="mt-6 text-xs uppercase tracking-[0.22em] text-gold">Factory Tour</span>
                 <span className="mt-2 font-display text-2xl">
-                  {isAr ? "شاهد المصنع الذي نصدّر منه" : "Inside our partner factory"}
+                  {isAr ? "شاهد خطوط الإنتاج" : "Inside our production lines"}
                 </span>
               </button>
             )}
@@ -167,11 +165,8 @@ function MarblePage() {
               {data.map((p, i) => {
                 const img = p.images?.[0]?.src;
                 return (
-                  <motion.a
+                  <motion.div
                     key={p.id}
-                    href={p.permalink}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -189,15 +184,12 @@ function MarblePage() {
                       )}
                     </div>
                     <div className="p-4">
-                      <div className="flex items-center justify-between gap-2">
-                        <div className="font-medium text-sm truncate">{p.name}</div>
-                        <ExternalLink className="h-3.5 w-3.5 text-muted-foreground group-hover:text-gold shrink-0" />
-                      </div>
+                      <div className="font-medium text-sm truncate">{p.name}</div>
                       <div className="mt-1 text-xs text-muted-foreground line-clamp-2">
                         {stripHtml(p.short_description)}
                       </div>
                     </div>
-                  </motion.a>
+                  </motion.div>
                 );
               })}
             </div>

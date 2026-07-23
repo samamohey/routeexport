@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import quartzSlab from "@/assets/quartz-slabs-1.jpg";
 import factory from "@/assets/factory-2.jpg";
+import marble from "@/assets/factory-1.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/categories/")({
@@ -45,7 +46,7 @@ function CategoriesPage() {
       to: "/categories/marble-alternatives",
       title: t("cat.marble.title"),
       desc: t("cat.marble.desc"),
-      img: "https://i0.wp.com/kayan-egy.net/wp-content/uploads/2025/06/61.png?fit=800%2C800&ssl=1",
+      img: marble,
       tag: "01",
     },
     {
