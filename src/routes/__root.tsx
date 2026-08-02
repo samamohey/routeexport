@@ -81,8 +81,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide." },
       { property: "og:description", content: "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide." },
       { name: "twitter:description", content: "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/18096b6f-f3fc-46a5-9e9a-835e87014acf/id-preview-db76e993--4dfc96d0-96c6-4cef-8d8e-4795b7d78c5c.lovable.app-1783792160280.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/18096b6f-f3fc-46a5-9e9a-835e87014acf/id-preview-db76e993--4dfc96d0-96c6-4cef-8d8e-4795b7d78c5c.lovable.app-1783792160280.png" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -142,9 +142,15 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-dvh flex-col">
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:text-primary-foreground"
+          >
+            Skip to content
+          </a>
           <SiteHeader />
-          <main className="flex-1"><Outlet /></main>
+          <main id="main-content" className="flex-1"><Outlet /></main>
           <SiteFooter />
           <Toaster position="top-center" />
         </div>

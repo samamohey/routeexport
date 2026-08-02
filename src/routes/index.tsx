@@ -4,6 +4,7 @@ import { ArrowRight, ShieldCheck, Globe2, Award, Truck } from "lucide-react";
 import heroKitchen from "@/assets/hero-kitchen.jpg";
 import quartzSlab from "@/assets/quartz-slabs-1.jpg";
 import factory from "@/assets/factory-2.jpg";
+import marblePanels from "@/assets/factory-1.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -56,7 +57,7 @@ function HomePage() {
       to: "/categories/marble-alternatives",
       title: t("cat.marble.title"),
       desc: t("cat.marble.desc"),
-      img: "https://i0.wp.com/kayan-egy.net/wp-content/uploads/2025/06/61.png?fit=800%2C800&ssl=1",
+      img: marblePanels,
       tag: "01",
     },
     {
@@ -80,7 +81,16 @@ function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroKitchen} alt="Modern kitchen finished with Egyptian engineered quartz slabs" className="h-full w-full object-cover opacity-30" />
+          <img
+            src={heroKitchen}
+            alt="Modern kitchen finished with Egyptian engineered quartz slabs"
+            width={1600}
+            height={1067}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover opacity-30"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
         </div>
         <div className="container-x pt-24 pb-28 md:pt-36 md:pb-40">
@@ -165,7 +175,11 @@ function HomePage() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                     <img
                       src={c.img}
-                      alt={c.title}
+                      alt={`${c.title} exported from Egypt by Nile Stone Exports`}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4 rtl:left-auto rtl:right-4 font-display text-cream/90 text-lg bg-ink px-3 py-1 rounded-full">
@@ -215,7 +229,7 @@ function HomePage() {
             </ul>
           </div>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <img src={factory} alt="Factory floor" className="h-full w-full object-cover" />
+            <img src={factory} alt="Nile Stone Exports partner factory floor in Ain Sokhna, Egypt" width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
             <div className="absolute inset-x-6 bottom-6 bg-cream/95 text-ink rounded-xl p-5">
               <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Facility</div>
               <div className="font-display text-xl mt-1">Ain Sokhna · Suez Governorate</div>

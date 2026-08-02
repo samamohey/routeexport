@@ -5,6 +5,7 @@ import { Play } from "lucide-react";
 import { useState } from "react";
 import factoryVideo from "@/assets/kayan-factory.mp4.asset.json";
 import { useI18n } from "@/lib/i18n";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 
 type Product = {
   id: number;
@@ -43,6 +44,16 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
             "Lightweight composite marble-look panels, 60+ patterns, 1.22×2.80m, 3–6mm thickness — exported from Egypt.",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Categories", path: "/categories" },
+            { name: "Marble Slab Alternatives", path: "/categories/marble-alternatives" },
+          ]),
+        ),
+      },
     ],
   }),
   component: MarblePage,
@@ -72,6 +83,13 @@ function MarblePage() {
       {/* Header */}
       <section className="py-20 border-b border-border">
         <div className="container-x">
+          <Breadcrumbs
+            items={[
+              { label: isAr ? "الرئيسية" : "Home", to: "/" },
+              { label: isAr ? "المنتجات" : "Categories", to: "/categories" },
+              { label: isAr ? "بدائل ألواح الرخام" : "Marble Slab Alternatives" },
+            ]}
+          />
           <span className="badge-gold">01 · {isAr ? "المنتج الأول" : "Category One"}</span>
           <h1 className="mt-6 font-display text-5xl md:text-6xl leading-[1.05] max-w-3xl">
             {isAr ? "بدائل ألواح الرخام" : "Marble Slab Alternatives"}
@@ -177,8 +195,11 @@ function MarblePage() {
                       {img && (
                         <img
                           src={img}
-                          alt={p.name}
+                          alt={`${p.name} marble alternative panel exported from Egypt`}
+                          width={600}
+                          height={600}
                           loading="lazy"
+                          decoding="async"
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       )}

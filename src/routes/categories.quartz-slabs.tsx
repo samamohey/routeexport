@@ -6,6 +6,7 @@ import slab2 from "@/assets/quartz-slabs-2.jpg";
 import slab3 from "@/assets/quartz-slabs-3.jpg";
 import kitchen from "@/assets/kitchen-quartz.jpg";
 import { useI18n } from "@/lib/i18n";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/categories/quartz-slabs")({
   head: () => ({
@@ -35,6 +36,16 @@ export const Route = createFileRoute("/categories/quartz-slabs")({
           description:
             "Engineered quartz slabs made in Egypt, over 90% natural quartz mineral. Standard 327×161cm, jumbo 330×165cm, extra 310×152cm; 15/20/30mm.",
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Categories", path: "/categories" },
+            { name: "Quartz Slabs", path: "/categories/quartz-slabs" },
+          ]),
+        ),
       },
     ],
   }),
@@ -89,10 +100,17 @@ function QuartzSlabsPage() {
       {/* Hero */}
       <section className="relative overflow-hidden py-24">
         <div className="absolute inset-0 -z-10">
-          <img src={kitchen} alt="" className="h-full w-full object-cover opacity-25" />
+          <img src={kitchen} alt="" aria-hidden="true" width={1600} height={1067} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
         </div>
         <div className="container-x">
+          <Breadcrumbs
+            items={[
+              { label: isAr ? "الرئيسية" : "Home", to: "/" },
+              { label: isAr ? "المنتجات" : "Categories", to: "/categories" },
+              { label: isAr ? "ألواح الكوارتز" : "Quartz Slabs" },
+            ]}
+          />
           <span className="badge-gold">03 · EGY QUARTZ</span>
           <h1 className="mt-6 font-display text-5xl md:text-7xl leading-[1.05] max-w-3xl">
             {isAr ? "الكوارتز المصنّع — السطح المصري الأصلي." : "The original Egyptian quartz surface."}
@@ -125,7 +143,7 @@ function QuartzSlabsPage() {
                 className="rounded-2xl overflow-hidden bg-card border border-border"
               >
                 <div className="aspect-[4/5] overflow-hidden bg-muted">
-                  <img src={c.img} alt={c.name} className="h-full w-full object-cover" />
+                  <img src={c.img} alt={`${c.name} — ${c.tone} Egyptian engineered quartz slab`} width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
                   <div className="text-xs uppercase tracking-widest text-gold">{c.code}</div>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/categories/raw-quartz")({
   head: () => ({
@@ -31,6 +32,16 @@ export const Route = createFileRoute("/categories/raw-quartz")({
           description:
             "Egyptian high-purity raw quartz from Mount Kamiliya, Ain Sokhna, in four particle grades for glass, ceramics, and engineered stone.",
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Categories", path: "/categories" },
+            { name: "Raw Quartz Aggregate", path: "/categories/raw-quartz" },
+          ]),
+        ),
       },
     ],
   }),
@@ -143,6 +154,13 @@ function RawQuartzPage() {
     <>
       <section className="py-20 border-b border-border">
         <div className="container-x">
+          <Breadcrumbs
+            items={[
+              { label: isAr ? "الرئيسية" : "Home", to: "/" },
+              { label: isAr ? "المنتجات" : "Categories", to: "/categories" },
+              { label: isAr ? "الكوارتز الخام" : "Raw Quartz" },
+            ]}
+          />
           <span className="badge-gold">02 · {isAr ? "المنتج الثاني" : "Category Two"}</span>
           <h1 className="mt-6 font-display text-5xl md:text-6xl leading-[1.05] max-w-3xl">
             {isAr ? "الكوارتز الخام عالي النقاء" : "High-Purity Raw Quartz"}
