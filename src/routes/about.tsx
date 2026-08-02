@@ -53,7 +53,7 @@ function AboutPage() {
             viewport={{ once: true }}
             src={factory}
             alt="Egyptian stone factory floor operated by Nile Stone Exports partners"
-            className="rounded-2xl aspect-[4/3] object-cover w-full"
+            width={800} height={600} loading="lazy" decoding="async" className="rounded-2xl aspect-[4/3] object-cover w-full"
           />
           <motion.img
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ function AboutPage() {
             transition={{ delay: 0.15 }}
             src={kitchen}
             alt="Finished Egyptian quartz surface installed on a kitchen countertop"
-            className="rounded-2xl aspect-[4/3] object-cover w-full md:mt-16"
+            width={800} height={600} loading="lazy" decoding="async" className="rounded-2xl aspect-[4/3] object-cover w-full md:mt-16"
           />
         </div>
       </section>
