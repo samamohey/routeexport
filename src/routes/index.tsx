@@ -175,7 +175,11 @@ function HomePage() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                     <img
                       src={c.img}
-                      alt={c.title}
+                      alt={`${c.title} exported from Egypt by Nile Stone Exports`}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4 rtl:left-auto rtl:right-4 font-display text-cream/90 text-lg bg-ink px-3 py-1 rounded-full">
