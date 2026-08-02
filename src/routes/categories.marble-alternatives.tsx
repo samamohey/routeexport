@@ -195,8 +195,11 @@ function MarblePage() {
                       {img && (
                         <img
                           src={img}
-                          alt={p.name}
+                          alt={`${p.name} marble alternative panel exported from Egypt`}
+                          width={600}
+                          height={600}
                           loading="lazy"
+                          decoding="async"
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       )}
