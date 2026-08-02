@@ -100,10 +100,17 @@ function QuartzSlabsPage() {
       {/* Hero */}
       <section className="relative overflow-hidden py-24">
         <div className="absolute inset-0 -z-10">
-          <img src={kitchen} alt="" className="h-full w-full object-cover opacity-25" />
+          <img src={kitchen} alt="" aria-hidden="true" width={1600} height={1067} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
         </div>
         <div className="container-x">
+          <Breadcrumbs
+            items={[
+              { label: isAr ? "الرئيسية" : "Home", to: "/" },
+              { label: isAr ? "المنتجات" : "Categories", to: "/categories" },
+              { label: isAr ? "ألواح الكوارتز" : "Quartz Slabs" },
+            ]}
+          />
           <span className="badge-gold">03 · EGY QUARTZ</span>
           <h1 className="mt-6 font-display text-5xl md:text-7xl leading-[1.05] max-w-3xl">
             {isAr ? "الكوارتز المصنّع — السطح المصري الأصلي." : "The original Egyptian quartz surface."}
