@@ -6,6 +6,7 @@ import slab2 from "@/assets/quartz-slabs-2.jpg";
 import slab3 from "@/assets/quartz-slabs-3.jpg";
 import kitchen from "@/assets/kitchen-quartz.jpg";
 import { useI18n } from "@/lib/i18n";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/categories/quartz-slabs")({
   head: () => ({
