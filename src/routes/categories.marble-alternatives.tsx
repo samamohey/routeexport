@@ -5,6 +5,7 @@ import { Play } from "lucide-react";
 import { useState } from "react";
 import factoryVideo from "@/assets/kayan-factory.mp4.asset.json";
 import { useI18n } from "@/lib/i18n";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 
 type Product = {
   id: number;
