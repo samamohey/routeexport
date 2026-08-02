@@ -83,6 +83,13 @@ function MarblePage() {
       {/* Header */}
       <section className="py-20 border-b border-border">
         <div className="container-x">
+          <Breadcrumbs
+            items={[
+              { label: isAr ? "الرئيسية" : "Home", to: "/" },
+              { label: isAr ? "المنتجات" : "Categories", to: "/categories" },
+              { label: isAr ? "بدائل ألواح الرخام" : "Marble Slab Alternatives" },
+            ]}
+          />
           <span className="badge-gold">01 · {isAr ? "المنتج الأول" : "Category One"}</span>
           <h1 className="mt-6 font-display text-5xl md:text-6xl leading-[1.05] max-w-3xl">
             {isAr ? "بدائل ألواح الرخام" : "Marble Slab Alternatives"}
