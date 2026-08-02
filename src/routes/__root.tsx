@@ -142,9 +142,15 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-dvh flex-col">
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:text-primary-foreground"
+          >
+            Skip to content
+          </a>
           <SiteHeader />
-          <main className="flex-1"><Outlet /></main>
+          <main id="main-content" className="flex-1"><Outlet /></main>
           <SiteFooter />
           <Toaster position="top-center" />
         </div>
