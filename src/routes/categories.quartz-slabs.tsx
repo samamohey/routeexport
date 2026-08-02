@@ -36,6 +36,16 @@ export const Route = createFileRoute("/categories/quartz-slabs")({
             "Engineered quartz slabs made in Egypt, over 90% natural quartz mineral. Standard 327×161cm, jumbo 330×165cm, extra 310×152cm; 15/20/30mm.",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Categories", path: "/categories" },
+            { name: "Quartz Slabs", path: "/categories/quartz-slabs" },
+          ]),
+        ),
+      },
     ],
   }),
   component: QuartzSlabsPage,
