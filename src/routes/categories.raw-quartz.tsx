@@ -32,6 +32,16 @@ export const Route = createFileRoute("/categories/raw-quartz")({
             "Egyptian high-purity raw quartz from Mount Kamiliya, Ain Sokhna, in four particle grades for glass, ceramics, and engineered stone.",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Categories", path: "/categories" },
+            { name: "Raw Quartz Aggregate", path: "/categories/raw-quartz" },
+          ]),
+        ),
+      },
     ],
   }),
   component: RawQuartzPage,
