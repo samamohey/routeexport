@@ -43,6 +43,16 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
             "Lightweight composite marble-look panels, 60+ patterns, 1.22×2.80m, 3–6mm thickness — exported from Egypt.",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Categories", path: "/categories" },
+            { name: "Marble Slab Alternatives", path: "/categories/marble-alternatives" },
+          ]),
+        ),
+      },
     ],
   }),
   component: MarblePage,
