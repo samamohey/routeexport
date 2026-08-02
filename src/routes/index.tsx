@@ -81,7 +81,16 @@ function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroKitchen} alt="Modern kitchen finished with Egyptian engineered quartz slabs" className="h-full w-full object-cover opacity-30" />
+          <img
+            src={heroKitchen}
+            alt="Modern kitchen finished with Egyptian engineered quartz slabs"
+            width={1600}
+            height={1067}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover opacity-30"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
         </div>
         <div className="container-x pt-24 pb-28 md:pt-36 md:pb-40">
