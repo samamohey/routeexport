@@ -57,7 +57,7 @@ function HomePage() {
       to: "/categories/marble-alternatives",
       title: t("cat.marble.title"),
       desc: t("cat.marble.desc"),
-      img: "https://i0.wp.com/kayan-egy.net/wp-content/uploads/2025/06/61.png?fit=800%2C800&ssl=1",
+      img: marblePanels,
       tag: "01",
     },
     {
