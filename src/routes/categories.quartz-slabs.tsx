@@ -143,7 +143,7 @@ function QuartzSlabsPage() {
                 className="rounded-2xl overflow-hidden bg-card border border-border"
               >
                 <div className="aspect-[4/5] overflow-hidden bg-muted">
-                  <img src={c.img} alt={c.name} className="h-full w-full object-cover" />
+                  <img src={c.img} alt={`${c.name} — ${c.tone} Egyptian engineered quartz slab`} width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
                   <div className="text-xs uppercase tracking-widest text-gold">{c.code}</div>
