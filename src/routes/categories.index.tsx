@@ -81,7 +81,7 @@ function CategoriesPage() {
               className="group block rounded-2xl bg-card border border-border overflow-hidden hover:border-gold/60 transition"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                <img src={c.img} alt={c.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={c.img} alt={`${c.title} exported from Egypt`} width={800} height={600} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute top-4 left-4 rtl:left-auto rtl:right-4 font-display text-cream/90 text-lg bg-ink px-3 py-1 rounded-full">{c.tag}</div>
               </div>
               <div className="p-7">
