@@ -1,61 +1,67 @@
-## SEO Optimization Plan — Nile Stone Exports
+# SEO, Performance & Accessibility Overhaul
 
-Goal: make the site fully discoverable on Google (English + Arabic) for Egyptian stone export queries, with proper metadata, structured data, sitemap, and social previews.
+Goal: take the site from "good basics" to a production-grade, Lighthouse-ready SEO setup across all 7 pages (Home, About, Contact, Categories, Marble Alternatives, Raw Quartz, Quartz Slabs).
 
-### 1. Per-route head metadata (title, description, OG, canonical)
-Currently only `__root.tsx`, `index.tsx` (missing head), and `marble-alternatives` have partial metadata. Add a proper `head()` to every route:
+## What already exists (verified)
+- SSR is on by default (TanStack Start) — content is server-rendered.
+- Per-route `head()` with title, description, og tags, canonical.
+- Dynamic `sitemap.xml` route + `robots.txt` with Sitemap directive.
+- Some JSON-LD (WebSite, Organization, Product, Breadcrumb).
 
-- `/` — title: "Egyptian Marble, Quartz & Stone Exporter | Nile Stone Exports" · description targeting "Egyptian stone exporter, marble alternatives, quartz slabs, raw quartz"
-- `/about` — "About Nile Stone Exports — Registered Egyptian Export House"
-- `/categories` — "Product Categories — Marble, Quartz Slabs & Raw Quartz"
-- `/categories/marble-alternatives` — keep, tighten keywords
-- `/categories/raw-quartz` — "Raw Quartz Aggregate from Egypt — 45µm to 1200µm Grades"
-- `/categories/quartz-slabs` — "Engineered Quartz Slabs — EGY QUARTZ Collection"
-- `/contact` — "Contact Nile Stone Exports — Request Export Quote"
+## What will change
 
-Each route gets: `title`, `description`, `og:title`, `og:description`, `og:type`, `og:url` (relative), `twitter:card`, and `<link rel="canonical">` (relative — leaf only).
+### 1. Metadata cleanup
+- Move `og:image` / `twitter:image` off `__root.tsx` (root-level images override every child preview) into each leaf route, so each page can have its own preview image.
+- Add `twitter:card`, `twitter:title`, `twitter:description` per page.
+- Verify every route has a unique title (<60 chars), description (<160), self-referencing canonical and `og:url`.
+- Add `hreflang` alternates (en/ar) and `og:locale`.
 
-### 2. Structured data (JSON-LD)
-- Root: `Organization` schema (name, logo, country: Egypt, contact, sameAs)
-- Home: `WebSite` schema
-- Category pages: `Product` or `ItemList` schema with grade specs
-- Contact: `ContactPage` schema
-- All pages: `BreadcrumbList`
+### 2. Structured data
+- Root: `Organization` + `WebSite` (with SearchAction omitted since there's no search).
+- Category pages: `BreadcrumbList` + `ItemList`/`Product` for the products shown.
+- Contact page: `ContactPage` schema. No LocalBusiness (no public address/storefront).
+- Product schema on marble catalog items pulled from the live feed.
 
-### 3. Sitemap + robots.txt
-- Create `src/routes/sitemap[.]xml.ts` server route listing all 7 routes
-- Create `public/robots.txt` (Allow all, no Sitemap directive until domain is set — leave TODO)
+### 3. Visible breadcrumbs
+- New `Breadcrumbs` component (nav + ol + aria-label), rendered on all category and inner pages, matching the BreadcrumbList JSON-LD.
 
-### 4. Semantic HTML & accessibility fixes
-- Ensure single `<h1>` per page (audit current pages)
-- Add descriptive `alt` text on every `<img>` (hero, category thumbs, factory photos) — currently many use `alt=""`
-- Add `loading="lazy"` where missing
-- Ensure heading hierarchy (h1 → h2 → h3)
+### 4. Semantic HTML & headings
+- Audit each page: exactly one `h1`, no skipped levels, `header`/`nav`/`main`/`section`/`article`/`footer` used properly, `main` landmark present once.
+- Reduce redundant wrapper divs where it doesn't affect design.
 
-### 5. Language / i18n SEO
-- Set `<html lang>` dynamically based on `useI18n` language (currently hardcoded `"en"`)
-- Add `dir="rtl"` when Arabic
-- Add `hreflang` alternate link tags (`en`, `ar`, `x-default`) once URL structure decided — for now, self-referential
+### 5. Images
+- Replace the remaining external hotlinked image on the Home page (kayan CDN) with a local asset — also finishes removing the external brand link.
+- Every `img`: descriptive `alt` (empty `alt=""` only for decorative), `loading="lazy"` (except the hero LCP image, which gets `fetchpriority="high"` + a `preload` link), explicit `width`/`height` to kill CLS.
+- Serve local assets as WebP/AVIF variants via `vite-imagetools` at build time.
 
-### 6. Performance signals (SEO ranking factor)
-- Preload hero image
-- Ensure images have width/height to prevent CLS
-- Font: already using `display=swap` ✓
+### 6. Performance
+- Preload the LCP hero image and critical font; use `font-display: swap`.
+- Lazy-load the factory video (`preload="none"` + poster) so it doesn't block LCP.
+- Code-split heavy client-only pieces (framer-motion usage kept, but avoid animating above-the-fold LCP element).
+- Confirm caching headers on the sitemap and API proxy route.
 
-### 7. Content-level keyword targeting
-Bake keywords naturally into H1/H2 and first paragraph of each page:
-- "Egyptian marble exporter", "quartz slabs Egypt", "raw quartz aggregate supplier", "marble alternative panels FOB Egypt"
+### 7. Accessibility
+- ARIA labels on icon-only buttons (language toggle, mobile menu), visible focus rings, `aria-current` on active nav links.
+- Contact form: every input gets a real `<label>`, `aria-describedby` for errors, `aria-live` for the submit result.
+- Check gold-on-cream / cream-on-ink contrast ratios and adjust tokens if any pair falls below 4.5:1.
+- Use `h-dvh` instead of `h-screen` where full-height is used.
 
-### Not included (needs your input)
-- **og:image** — needs a real hero image at an absolute URL. I'll omit for now (hosting injects a screenshot) unless you want me to generate branded social cards.
-- **Sitemap domain** — will use empty BASE_URL placeholder until you set a custom domain.
-- **Organization contact info** — currently placeholder (Nile Stone Exports, Ain Sokhna). Will use those in JSON-LD; swap later when you provide real data.
+### 8. Technical SEO
+- Custom 404 page (`notFoundComponent`) with `noindex` and links back into the site.
+- Sitemap: confirm it lists every indexable route and drops any 404/utility routes; no fabricated `lastmod`.
+- robots.txt: keep `Allow: /`, add `Disallow: /api/`.
+- Internal linking pass: descriptive anchor text, cross-links between the three category pages, footer link block covering all pages.
 
-### Files to change
-- edit: `src/routes/__root.tsx` (dynamic lang/dir, Organization JSON-LD)
-- edit: `src/routes/index.tsx` (add head, WebSite JSON-LD, alt text, h1 audit)
-- edit: `src/routes/about.tsx`, `categories.index.tsx`, `categories.raw-quartz.tsx`, `categories.quartz-slabs.tsx`, `categories.marble-alternatives.tsx`, `contact.tsx` (head + JSON-LD + alt/h1 fixes)
-- create: `src/routes/sitemap[.]xml.ts`
-- create: `public/robots.txt`
+### 9. Icons & PWA
+- Add `apple-touch-icon`, `site.webmanifest`, and `theme-color` meta. Keep the existing favicon.
 
-After implementation I'll suggest running the SEO scan to verify.
+### 10. Cleanup
+- Remove `console.log`s, dead code, and unused imports/components.
+
+### 11. Verification
+- Run a production build and a Lighthouse pass against the built app; report the four scores and fix regressions before finishing. Note: hosting-level items (HTTPS, security headers, 301s) are handled by the Lovable platform, not app code — I'll flag anything I can't control.
+
+## Technical notes
+- Head tags stay in per-route `head()` (TanStack pattern); no react-helmet.
+- `og:image` uses the absolute published URL `https://nile-exports.lovable.app/...`.
+- Social platforms cache previews, so changed og images appear only after their re-scrape.
