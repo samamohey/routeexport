@@ -229,7 +229,7 @@ function HomePage() {
             </ul>
           </div>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <img src={factory} alt="Factory floor" className="h-full w-full object-cover" />
+            <img src={factory} alt="Nile Stone Exports partner factory floor in Ain Sokhna, Egypt" width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
             <div className="absolute inset-x-6 bottom-6 bg-cream/95 text-ink rounded-xl p-5">
               <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Facility</div>
               <div className="font-display text-xl mt-1">Ain Sokhna · Suez Governorate</div>
