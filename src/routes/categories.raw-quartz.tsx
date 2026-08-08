@@ -197,7 +197,7 @@ function RawQuartzPage() {
             >
               <div>
                 <div className="text-xs uppercase tracking-[0.22em] text-gold">Grade {String(idx + 1).padStart(2, "0")}</div>
-                <h3 className="mt-3 font-display text-4xl">{g.code}</h3>
+                <h2 className="mt-3 font-display text-4xl">{g.code}</h2>
                 <p className="mt-2 text-sm text-muted-foreground">{g.range}</p>
 
                 <dl className="mt-8 grid grid-cols-2 gap-4">
