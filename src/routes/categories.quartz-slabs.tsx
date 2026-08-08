@@ -11,13 +11,13 @@ import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 export const Route = createFileRoute("/categories/quartz-slabs")({
   head: () => ({
     meta: [
-      { title: "Engineered Quartz Slabs from Egypt — EGY QUARTZ Collection | Nile Stone Exports" },
+      { title: "Engineered Quartz Slabs from Egypt | Nile Stone" },
       {
         name: "description",
         content:
           "Egyptian engineered quartz slabs for countertops, floors, and cladding. Jumbo 330×165cm and 310×152cm. Thickness 15/20/30mm. Polished and matte finishes.",
       },
-      { property: "og:title", content: "Engineered Quartz Slabs from Egypt — EGY QUARTZ" },
+      { property: "og:title", content: "Engineered Quartz Slabs from Egypt | Nile Stone" },
       { property: "og:description", content: "The original Egyptian quartz surface: 15/20/30mm slabs in seamless jumbo sizes." },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://nile-exports.lovable.app/categories/quartz-slabs" },

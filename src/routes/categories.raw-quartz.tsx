@@ -7,13 +7,13 @@ import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 export const Route = createFileRoute("/categories/raw-quartz")({
   head: () => ({
     meta: [
-      { title: "Raw Quartz Aggregate from Egypt — 45µm to 1200µm | Nile Stone Exports" },
+      { title: "Raw Quartz Aggregate from Egypt | Nile Stone" },
       {
         name: "description",
         content:
           "High-purity Egyptian raw quartz aggregate (SiO₂ > 99.5%) in four particle grades: 45µm, 100–300µm, 300–700µm, 700–1200µm. Full ICP analysis and grain distribution.",
       },
-      { property: "og:title", content: "Raw Quartz Aggregate from Egypt — 45µm to 1200µm" },
+      { property: "og:title", content: "Raw Quartz Aggregate from Egypt | Nile Stone" },
       { property: "og:description", content: "Four grades of high-purity Egyptian quartz for glass, ceramics, and engineered stone." },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://nile-exports.lovable.app/categories/raw-quartz" },
