@@ -94,8 +94,9 @@ function ContactPage() {
             <Field label={isAr ? "المنتج المطلوب" : "Product of interest"} value={form.product} onChange={(v) => setForm({ ...form, product: v })} placeholder={isAr ? "بدائل رخام / كوارتز خام / ألواح كوارتز" : "Marble alternatives / raw quartz / slabs"} />
           </div>
           <div>
-            <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">{isAr ? "التفاصيل" : "Message"}</label>
+            <label htmlFor="message" className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">{isAr ? "التفاصيل" : "Message"}</label>
             <textarea
+              id="message"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={5}
@@ -119,10 +120,12 @@ function ContactPage() {
 function Field({ label, value, onChange, type = "text", required, placeholder }: {
   label: string; value: string; onChange: (v: string) => void; type?: string; required?: boolean; placeholder?: string;
 }) {
+  const id = useId();
   return (
     <div>
-      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">{label}</label>
+      <label htmlFor={id} className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">{label}</label>
       <input
+        id={id}
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
