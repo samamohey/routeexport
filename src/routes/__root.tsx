@@ -83,6 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide." },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
 
+      { name: "google-site-verification", content: "Pi8WKYfnHMrX72x6XaXyiuTD8hKqnEEqAT0Dy6649Rs" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
