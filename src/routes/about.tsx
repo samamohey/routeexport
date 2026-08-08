@@ -11,10 +11,10 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Nile Stone Exports is a registered Egyptian trade house exporting marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics.",
+          "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics.",
       },
       { property: "og:title", content: "About Nile Stone Exports — Registered Egyptian Export House" },
-      { property: "og:description", content: "Registered with the Egyptian Export Council. Curated factories, transparent logistics, worldwide shipping." },
+      { property: "og:description", content: "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://nile-exports.lovable.app/about" },
     ],

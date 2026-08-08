@@ -18,13 +18,13 @@ type Product = {
 export const Route = createFileRoute("/categories/marble-alternatives")({
   head: () => ({
     meta: [
-      { title: "Marble Slab Alternative Panels from Egypt | Nile Stone Exports" },
+      { title: "Marble Alternative Panels from Egypt | Nile Stone" },
       {
         name: "description",
         content:
           "Lightweight, moisture-resistant marble-look composite panels exported from Egypt. 60+ patterns, 1.22×2.80m, 3–6mm — ~1,200 pcs per 40' HC.",
       },
-      { property: "og:title", content: "Marble Slab Alternative Panels from Egypt" },
+      { property: "og:title", content: "Marble Alternative Panels from Egypt | Nile Stone" },
       { property: "og:description", content: "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects." },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://nile-exports.lovable.app/categories/marble-alternatives" },

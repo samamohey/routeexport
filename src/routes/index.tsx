@@ -10,16 +10,16 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Egyptian Marble, Quartz & Stone Exporter | Nile Stone Exports" },
+      { title: "Egyptian Stone Exporter | Nile Stone Exports" },
       {
         name: "description",
         content:
-          "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide.",
+          "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
       },
-      { property: "og:title", content: "Egyptian Marble, Quartz & Stone Exporter | Nile Stone Exports" },
+      { property: "og:title", content: "Egyptian Stone Exporter | Nile Stone Exports" },
       {
         property: "og:description",
-        content: "Nile Stone Exports — a registered Egyptian exporter of marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs. FOB/CIF shipping worldwide.",
+        content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://nile-exports.lovable.app/" },
