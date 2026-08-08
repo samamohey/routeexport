@@ -91,7 +91,7 @@ function AboutPage() {
           ].map((b) => (
             <div key={b.title} className="rounded-2xl bg-card border border-border p-8">
               <div className="h-10 w-10 rounded-full bg-gold/10 hairline-gold flex items-center justify-center text-gold font-display">◆</div>
-              <h3 className="mt-5 font-display text-2xl">{b.title}</h3>
+              <h2 className="mt-5 font-display text-2xl">{b.title}</h2>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{b.body}</p>
             </div>
           ))}

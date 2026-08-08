@@ -85,7 +85,7 @@ function CategoriesPage() {
                 <div className="absolute top-4 left-4 rtl:left-auto rtl:right-4 font-display text-cream/90 text-lg bg-ink px-3 py-1 rounded-full">{c.tag}</div>
               </div>
               <div className="p-7">
-                <h3 className="font-display text-2xl">{c.title}</h3>
+                <h2 className="font-display text-2xl">{c.title}</h2>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
                 <div className="mt-6 inline-flex items-center gap-2 text-sm text-gold">
                   {isAr ? "عرض التفاصيل" : "View details"}
