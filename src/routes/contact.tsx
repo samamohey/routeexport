@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useId, useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
 import { useI18n } from "@/lib/i18n";
+import { submitEnquiry } from "@/lib/enquiries.functions";
 import { toast } from "sonner";
+
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -38,12 +41,29 @@ function ContactPage() {
   const { lang } = useI18n();
   const isAr = lang === "ar";
   const [form, setForm] = useState({ name: "", email: "", country: "", product: "", message: "" });
+  const [sending, setSending] = useState(false);
+  const send = useServerFn(submitEnquiry);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(isAr ? "تم إرسال طلبك بنجاح — سنعاود التواصل خلال 24 ساعة." : "Enquiry sent — we'll reply within 24 hours.");
-    setForm({ name: "", email: "", country: "", product: "", message: "" });
+    if (sending) return;
+    setSending(true);
+    try {
+      await send({ data: form });
+      toast.success(isAr ? "تم إرسال طلبك بنجاح — سنعاود التواصل خلال 24 ساعة." : "Enquiry sent — we'll reply within 24 hours.");
+      setForm({ name: "", email: "", country: "", product: "", message: "" });
+    } catch {
+      toast.error(
+        isAr
+          ? "تعذّر إرسال الطلب. برجاء المحاولة مرة أخرى أو مراسلتنا على البريد الإلكتروني."
+          : "We couldn't send your enquiry. Please try again or email us directly.",
+      );
+    } finally {
+      setSending(false);
+    }
   };
+
+
 
   return (
     <section className="py-20">
@@ -106,11 +126,15 @@ function ContactPage() {
           </div>
           <button
             type="submit"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition"
+            disabled={sending}
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            <Send className="h-4 w-4" />
-            {isAr ? "إرسال الطلب" : "Send enquiry"}
+            {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+            {sending
+              ? isAr ? "جارٍ الإرسال..." : "Sending..."
+              : isAr ? "إرسال الطلب" : "Send enquiry"}
           </button>
+
         </form>
       </div>
     </section>
