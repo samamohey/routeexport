@@ -41,12 +41,29 @@ function ContactPage() {
   const { lang } = useI18n();
   const isAr = lang === "ar";
   const [form, setForm] = useState({ name: "", email: "", country: "", product: "", message: "" });
+  const [sending, setSending] = useState(false);
+  const send = useServerFn(submitEnquiry);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(isAr ? "تم إرسال طلبك بنجاح — سنعاود التواصل خلال 24 ساعة." : "Enquiry sent — we'll reply within 24 hours.");
-    setForm({ name: "", email: "", country: "", product: "", message: "" });
+    if (sending) return;
+    setSending(true);
+    try {
+      await send({ data: form });
+      toast.success(isAr ? "تم إرسال طلبك بنجاح — سنعاود التواصل خلال 24 ساعة." : "Enquiry sent — we'll reply within 24 hours.");
+      setForm({ name: "", email: "", country: "", product: "", message: "" });
+    } catch {
+      toast.error(
+        isAr
+          ? "تعذّر إرسال الطلب. برجاء المحاولة مرة أخرى أو مراسلتنا على البريد الإلكتروني."
+          : "We couldn't send your enquiry. Please try again or email us directly.",
+      );
+    } finally {
+      setSending(false);
+    }
   };
+
+
 
   return (
     <section className="py-20">
