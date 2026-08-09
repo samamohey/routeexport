@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useId, useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
 import { useI18n } from "@/lib/i18n";
+import { submitEnquiry } from "@/lib/enquiries.functions";
 import { toast } from "sonner";
+
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
