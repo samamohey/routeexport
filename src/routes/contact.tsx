@@ -126,11 +126,15 @@ function ContactPage() {
           </div>
           <button
             type="submit"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition"
+            disabled={sending}
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            <Send className="h-4 w-4" />
-            {isAr ? "إرسال الطلب" : "Send enquiry"}
+            {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+            {sending
+              ? isAr ? "جارٍ الإرسال..." : "Sending..."
+              : isAr ? "إرسال الطلب" : "Send enquiry"}
           </button>
+
         </form>
       </div>
     </section>
