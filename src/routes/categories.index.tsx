@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import quartzSlab from "@/assets/quartz-slabs-1.jpg";
 import factory from "@/assets/factory-2.jpg";
 import marble from "@/assets/factory-1.jpg";
+import fertilizers from "@/assets/fertilizers-1.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/categories/")({
@@ -63,6 +64,13 @@ function CategoriesPage() {
       img: factory,
       tag: "03",
     },
+    {
+      to: "/categories/fertilizers",
+      title: t("cat.fert.title"),
+      desc: t("cat.fert.desc"),
+      img: fertilizers,
+      tag: "04",
+    },
   ] as const;
 
   return (
@@ -73,7 +81,7 @@ function CategoriesPage() {
           {isAr ? "ثلاث فئات نُصدّرها بثقة." : "Three categories we export with confidence."}
         </h1>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {categories.map((c) => (
             <Link
               key={c.to}

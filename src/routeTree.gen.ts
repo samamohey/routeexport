@@ -17,6 +17,7 @@ import { Route as CategoriesIndexRouteImport } from './routes/categories.index'
 import { Route as CategoriesRawQuartzRouteImport } from './routes/categories.raw-quartz'
 import { Route as CategoriesQuartzSlabsRouteImport } from './routes/categories.quartz-slabs'
 import { Route as CategoriesMarbleAlternativesRouteImport } from './routes/categories.marble-alternatives'
+import { Route as CategoriesFertilizersRouteImport } from './routes/categories.fertilizers'
 import { Route as ApiPublicMarbleProductsRouteImport } from './routes/api/public/marble-products'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -60,6 +61,11 @@ const CategoriesMarbleAlternativesRoute =
     path: '/categories/marble-alternatives',
     getParentRoute: () => rootRouteImport,
   } as any)
+const CategoriesFertilizersRoute = CategoriesFertilizersRouteImport.update({
+  id: '/categories/fertilizers',
+  path: '/categories/fertilizers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicMarbleProductsRoute = ApiPublicMarbleProductsRouteImport.update({
   id: '/api/public/marble-products',
   path: '/api/public/marble-products',
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/categories/fertilizers': typeof CategoriesFertilizersRoute
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/categories/fertilizers': typeof CategoriesFertilizersRoute
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/categories/fertilizers': typeof CategoriesFertilizersRoute
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/categories/fertilizers'
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/categories/fertilizers'
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/categories/fertilizers'
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CategoriesFertilizersRoute: typeof CategoriesFertilizersRoute
   CategoriesMarbleAlternativesRoute: typeof CategoriesMarbleAlternativesRoute
   CategoriesQuartzSlabsRoute: typeof CategoriesQuartzSlabsRoute
   CategoriesRawQuartzRoute: typeof CategoriesRawQuartzRoute
@@ -206,6 +219,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriesMarbleAlternativesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/categories/fertilizers': {
+      id: '/categories/fertilizers'
+      path: '/categories/fertilizers'
+      fullPath: '/categories/fertilizers'
+      preLoaderRoute: typeof CategoriesFertilizersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/marble-products': {
       id: '/api/public/marble-products'
       path: '/api/public/marble-products'
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CategoriesFertilizersRoute: CategoriesFertilizersRoute,
   CategoriesMarbleAlternativesRoute: CategoriesMarbleAlternativesRoute,
   CategoriesQuartzSlabsRoute: CategoriesQuartzSlabsRoute,
   CategoriesRawQuartzRoute: CategoriesRawQuartzRoute,

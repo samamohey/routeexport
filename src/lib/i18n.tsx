@@ -30,6 +30,11 @@ export const dict = {
     en: "Engineered quartz surfaces for kitchens, floors, and cladding.",
     ar: "ألواح كوارتز مصنّعة للمطابخ والأرضيات والواجهات.",
   },
+  "cat.fert.title": { en: "Agricultural Fertilizers", ar: "الأسمدة الزراعية" },
+  "cat.fert.desc": {
+    en: "Water-soluble NPK blends, potassium citrate and chelated micronutrients.",
+    ar: "أسمدة NPK كاملة الذوبان وبوتاسيوم سيترات وعناصر صغرى مخلّبية.",
+  },
   "footer.rights": {
     en: "All rights reserved.",
     ar: "جميع الحقوق محفوظة.",
