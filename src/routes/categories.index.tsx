@@ -81,7 +81,7 @@ function CategoriesPage() {
           {isAr ? "ثلاث فئات نُصدّرها بثقة." : "Three categories we export with confidence."}
         </h1>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {categories.map((c) => (
             <Link
               key={c.to}
