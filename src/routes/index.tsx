@@ -6,6 +6,7 @@ import quartzSlab from "@/assets/quartz-slabs-1.jpg";
 import factory from "@/assets/factory-2.jpg";
 import marblePanels from "@/assets/factory-1.jpg";
 import fertilizers from "@/assets/fertilizers-1.jpg";
+import technoValley from "@/assets/techno-valley-1.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -81,6 +82,13 @@ function HomePage() {
       desc: t("cat.fert.desc"),
       img: fertilizers,
       tag: "04",
+    },
+    {
+      to: "/categories/techno-valley",
+      title: t("cat.agri.title"),
+      desc: t("cat.agri.desc"),
+      img: technoValley,
+      tag: "05",
     },
   ] as const;
 
