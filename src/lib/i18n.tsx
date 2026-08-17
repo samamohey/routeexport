@@ -35,6 +35,11 @@ export const dict = {
     en: "Water-soluble NPK blends, potassium citrate and chelated micronutrients.",
     ar: "أسمدة NPK كاملة الذوبان وبوتاسيوم سيترات وعناصر صغرى مخلّبية.",
   },
+  "cat.agri.title": { en: "Fertilizers & Crop Protection", ar: "الأسمدة ووقاية المحاصيل" },
+  "cat.agri.desc": {
+    en: "ISO-certified soluble and granular fertilizers, micronutrients and bio-stimulants.",
+    ar: "أسمدة ذائبة ومحبّبة معتمدة ISO وعناصر صغرى ومحفزات حيوية.",
+  },
   "footer.rights": {
     en: "All rights reserved.",
     ar: "جميع الحقوق محفوظة.",
