@@ -5,6 +5,7 @@ import heroKitchen from "@/assets/hero-kitchen.jpg";
 import quartzSlab from "@/assets/quartz-slabs-1.jpg";
 import factory from "@/assets/factory-2.jpg";
 import marblePanels from "@/assets/factory-1.jpg";
+import fertilizers from "@/assets/fertilizers-1.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
