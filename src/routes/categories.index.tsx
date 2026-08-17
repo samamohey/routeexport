@@ -13,10 +13,10 @@ export const Route = createFileRoute("/categories/")({
       {
         name: "description",
         content:
-          "Browse Nile Stone Exports' three Egyptian export categories: marble slab alternatives, high-purity raw quartz aggregate, and engineered EGY QUARTZ slabs.",
+          "Browse Nile Stone Exports' four Egyptian export categories: marble slab alternatives, high-purity raw quartz aggregate, engineered EGY QUARTZ slabs, and agricultural fertilizers.",
       },
       { property: "og:title", content: "Product Categories | Nile Stone Exports" },
-      { property: "og:description", content: "Three curated categories of Egyptian building surfaces for global projects." },
+      { property: "og:description", content: "Four curated categories of Egyptian building surfaces for global projects." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://nile-exports.lovable.app/categories" },
     ],
@@ -78,7 +78,7 @@ function CategoriesPage() {
       <div className="container-x">
         <span className="badge-gold">{isAr ? "الفئات" : "Categories"}</span>
         <h1 className="mt-6 font-display text-5xl md:text-6xl max-w-3xl leading-[1.05]">
-          {isAr ? "ثلاث فئات نُصدّرها بثقة." : "Three categories we export with confidence."}
+          {isAr ? "أربع فئات نُصدّرها بثقة." : "Four categories we export with confidence."}
         </h1>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">

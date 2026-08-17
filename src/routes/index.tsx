@@ -5,6 +5,7 @@ import heroKitchen from "@/assets/hero-kitchen.jpg";
 import quartzSlab from "@/assets/quartz-slabs-1.jpg";
 import factory from "@/assets/factory-2.jpg";
 import marblePanels from "@/assets/factory-1.jpg";
+import fertilizers from "@/assets/fertilizers-1.jpg";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -73,6 +74,13 @@ function HomePage() {
       desc: t("cat.slab.desc"),
       img: factory,
       tag: "03",
+    },
+    {
+      to: "/categories/fertilizers",
+      title: t("cat.fert.title"),
+      desc: t("cat.fert.desc"),
+      img: fertilizers,
+      tag: "04",
     },
   ] as const;
 
@@ -152,13 +160,13 @@ function HomePage() {
             <div>
               <span className="text-xs uppercase tracking-[0.22em] text-gold">Our Categories</span>
               <h2 className="mt-3 font-display text-4xl md:text-5xl">
-                {isAr ? "ثلاث فئات من الجودة العالية" : "Three categories, one standard of quality"}
+                {isAr ? "أربع فئات بمعيار جودة واحد" : "Four categories, one standard of quality"}
               </h2>
             </div>
             <div className="hidden md:block gold-rule flex-1 mb-4 ml-8" />
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {categories.map((c, i) => (
               <motion.div
                 key={c.to}
