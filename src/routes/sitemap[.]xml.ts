@@ -21,6 +21,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/categories/raw-quartz", changefreq: "monthly", priority: "0.9" },
           { path: "/categories/quartz-slabs", changefreq: "monthly", priority: "0.9" },
           { path: "/categories/fertilizers", changefreq: "monthly", priority: "0.9" },
+          { path: "/categories/techno-valley", changefreq: "monthly", priority: "0.9" },
           { path: "/contact", changefreq: "monthly", priority: "0.7" },
         ];
 
