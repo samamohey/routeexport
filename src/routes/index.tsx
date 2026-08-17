@@ -74,6 +74,13 @@ function HomePage() {
       img: factory,
       tag: "03",
     },
+    {
+      to: "/categories/fertilizers",
+      title: t("cat.fert.title"),
+      desc: t("cat.fert.desc"),
+      img: fertilizers,
+      tag: "04",
+    },
   ] as const;
 
   return (
