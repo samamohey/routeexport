@@ -14,6 +14,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CategoriesIndexRouteImport } from './routes/categories.index'
+import { Route as CategoriesTechnoValleyRouteImport } from './routes/categories.techno-valley'
 import { Route as CategoriesRawQuartzRouteImport } from './routes/categories.raw-quartz'
 import { Route as CategoriesQuartzSlabsRouteImport } from './routes/categories.quartz-slabs'
 import { Route as CategoriesMarbleAlternativesRouteImport } from './routes/categories.marble-alternatives'
@@ -43,6 +44,11 @@ const IndexRoute = IndexRouteImport.update({
 const CategoriesIndexRoute = CategoriesIndexRouteImport.update({
   id: '/categories/',
   path: '/categories/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoriesTechnoValleyRoute = CategoriesTechnoValleyRouteImport.update({
+  id: '/categories/techno-valley',
+  path: '/categories/techno-valley',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CategoriesRawQuartzRoute = CategoriesRawQuartzRouteImport.update({
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
+  '/categories/techno-valley': typeof CategoriesTechnoValleyRoute
   '/categories/': typeof CategoriesIndexRoute
   '/api/public/marble-products': typeof ApiPublicMarbleProductsRoute
 }
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
+  '/categories/techno-valley': typeof CategoriesTechnoValleyRoute
   '/categories': typeof CategoriesIndexRoute
   '/api/public/marble-products': typeof ApiPublicMarbleProductsRoute
 }
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/categories/marble-alternatives': typeof CategoriesMarbleAlternativesRoute
   '/categories/quartz-slabs': typeof CategoriesQuartzSlabsRoute
   '/categories/raw-quartz': typeof CategoriesRawQuartzRoute
+  '/categories/techno-valley': typeof CategoriesTechnoValleyRoute
   '/categories/': typeof CategoriesIndexRoute
   '/api/public/marble-products': typeof ApiPublicMarbleProductsRoute
 }
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
+    | '/categories/techno-valley'
     | '/categories/'
     | '/api/public/marble-products'
   fileRoutesByTo: FileRoutesByTo
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
+    | '/categories/techno-valley'
     | '/categories'
     | '/api/public/marble-products'
   id:
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/categories/marble-alternatives'
     | '/categories/quartz-slabs'
     | '/categories/raw-quartz'
+    | '/categories/techno-valley'
     | '/categories/'
     | '/api/public/marble-products'
   fileRoutesById: FileRoutesById
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   CategoriesMarbleAlternativesRoute: typeof CategoriesMarbleAlternativesRoute
   CategoriesQuartzSlabsRoute: typeof CategoriesQuartzSlabsRoute
   CategoriesRawQuartzRoute: typeof CategoriesRawQuartzRoute
+  CategoriesTechnoValleyRoute: typeof CategoriesTechnoValleyRoute
   CategoriesIndexRoute: typeof CategoriesIndexRoute
   ApiPublicMarbleProductsRoute: typeof ApiPublicMarbleProductsRoute
 }
@@ -196,6 +209,13 @@ declare module '@tanstack/react-router' {
       path: '/categories'
       fullPath: '/categories/'
       preLoaderRoute: typeof CategoriesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categories/techno-valley': {
+      id: '/categories/techno-valley'
+      path: '/categories/techno-valley'
+      fullPath: '/categories/techno-valley'
+      preLoaderRoute: typeof CategoriesTechnoValleyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/categories/raw-quartz': {
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   CategoriesMarbleAlternativesRoute: CategoriesMarbleAlternativesRoute,
   CategoriesQuartzSlabsRoute: CategoriesQuartzSlabsRoute,
   CategoriesRawQuartzRoute: CategoriesRawQuartzRoute,
+  CategoriesTechnoValleyRoute: CategoriesTechnoValleyRoute,
   CategoriesIndexRoute: CategoriesIndexRoute,
   ApiPublicMarbleProductsRoute: ApiPublicMarbleProductsRoute,
 }
