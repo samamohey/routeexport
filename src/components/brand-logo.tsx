@@ -17,9 +17,10 @@ export function BrandLogo({ className }: BrandLogoProps) {
     >
       <defs>
         <linearGradient id="route-export-gold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="hsl(var(--gold-light, 45 78% 72%))" />
-          <stop offset="50%" stopColor="hsl(var(--gold, 42 62% 52%))" />
-          <stop offset="100%" stopColor="hsl(var(--gold-deep, 36 55% 38%))" />
+          <stop offset="0%" stopColor="var(--gold-soft)" />
+          <stop offset="55%" stopColor="var(--gold)" />
+          <stop offset="100%" stopColor="var(--gold)" />
+
         </linearGradient>
       </defs>
 
