@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { BrandLogo } from "@/components/brand-logo";
 
-
 export function SiteHeader() {
   const { t, lang, setLang } = useI18n();
   const [open, setOpen] = useState(false);
@@ -23,7 +22,9 @@ export function SiteHeader() {
           <BrandLogo className="h-9 w-9 shrink-0" />
           <div className="leading-tight">
             <div className="font-display text-lg tracking-wide">ROUTE EXPORT</div>
-            <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Egypt · Export House</div>
+            <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+              Egypt · Export House
+            </div>
           </div>
         </Link>
 
@@ -70,12 +71,7 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-border/60 bg-background">
           <div className="container-x py-4 flex flex-col gap-3">
             {nav.map((n) => (
-              <Link
-                key={n.to}
-                to={n.to}
-                onClick={() => setOpen(false)}
-                className="py-2 text-sm"
-              >
+              <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="py-2 text-sm">
                 {n.label}
               </Link>
             ))}

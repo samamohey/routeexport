@@ -14,7 +14,11 @@ export const Route = createFileRoute("/categories/raw-quartz")({
           "High-purity Egyptian raw quartz aggregate (SiO₂ > 99.5%) in four particle grades: 45µm, 100–300µm, 300–700µm, 700–1200µm. Full ICP analysis and grain distribution.",
       },
       { property: "og:title", content: "Raw Quartz Aggregate from Egypt | Route Export" },
-      { property: "og:description", content: "Four grades of high-purity Egyptian quartz for glass, ceramics, and engineered stone." },
+      {
+        property: "og:description",
+        content:
+          "Four grades of high-purity Egyptian quartz for glass, ceramics, and engineered stone.",
+      },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://routeexport.lovable.app/categories/raw-quartz" },
     ],
@@ -173,7 +177,11 @@ function RawQuartzPage() {
 
           <div className="mt-10 grid sm:grid-cols-4 gap-4">
             {grades.map((g) => (
-              <a key={g.code} href={`#grade-${g.code.replace(/\s/g, "")}`} className="border-t border-gold/40 pt-3 hover:border-gold transition">
+              <a
+                key={g.code}
+                href={`#grade-${g.code.replace(/\s/g, "")}`}
+                className="border-t border-gold/40 pt-3 hover:border-gold transition"
+              >
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Grade</div>
                 <div className="mt-1 font-display text-xl">{g.code}</div>
                 <div className="mt-2 text-xs text-gold">SiO₂ {g.sio2}</div>
@@ -196,17 +204,23 @@ function RawQuartzPage() {
               className="grid md:grid-cols-[1fr_1.5fr] gap-10 rounded-2xl bg-card border border-border p-8 md:p-10"
             >
               <div>
-                <div className="text-xs uppercase tracking-[0.22em] text-gold">Grade {String(idx + 1).padStart(2, "0")}</div>
+                <div className="text-xs uppercase tracking-[0.22em] text-gold">
+                  Grade {String(idx + 1).padStart(2, "0")}
+                </div>
                 <h2 className="mt-3 font-display text-4xl">{g.code}</h2>
                 <p className="mt-2 text-sm text-muted-foreground">{g.range}</p>
 
                 <dl className="mt-8 grid grid-cols-2 gap-4">
                   <div className="border-l-2 border-gold pl-3 rtl:border-l-0 rtl:border-r-2 rtl:pl-0 rtl:pr-3">
-                    <dt className="text-xs uppercase tracking-widest text-muted-foreground">SiO₂</dt>
+                    <dt className="text-xs uppercase tracking-widest text-muted-foreground">
+                      SiO₂
+                    </dt>
                     <dd className="font-display text-2xl mt-1">{g.sio2}</dd>
                   </div>
                   <div className="border-l-2 border-gold pl-3 rtl:border-l-0 rtl:border-r-2 rtl:pl-0 rtl:pr-3">
-                    <dt className="text-xs uppercase tracking-widest text-muted-foreground">L (color)</dt>
+                    <dt className="text-xs uppercase tracking-widest text-muted-foreground">
+                      L (color)
+                    </dt>
                     <dd className="font-display text-2xl mt-1">{g.L}</dd>
                   </div>
                 </dl>
@@ -218,7 +232,10 @@ function RawQuartzPage() {
                     </div>
                     <ul className="space-y-2 text-sm">
                       {g.distribution.map((d) => (
-                        <li key={d.size} className="flex items-center justify-between border-b border-border/60 pb-1.5">
+                        <li
+                          key={d.size}
+                          className="flex items-center justify-between border-b border-border/60 pb-1.5"
+                        >
                           <span className="text-muted-foreground">{d.size}</span>
                           <span className="font-medium">{d.pct}</span>
                         </li>
@@ -229,17 +246,23 @@ function RawQuartzPage() {
               </div>
 
               <div>
-                <div className="text-xs uppercase tracking-[0.22em] text-gold mb-4">ICP Analysis</div>
+                <div className="text-xs uppercase tracking-[0.22em] text-gold mb-4">
+                  ICP Analysis
+                </div>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
                   {g.keySpecs.map((s) => (
-                    <div key={s.name} className="flex items-center justify-between border-b border-border/60 py-2">
+                    <div
+                      key={s.name}
+                      className="flex items-center justify-between border-b border-border/60 py-2"
+                    >
                       <span className="text-muted-foreground">{s.name}</span>
                       <span className="font-mono">{s.value}</span>
                     </div>
                   ))}
                 </div>
                 <div className="mt-6 text-xs text-muted-foreground">
-                  Source: EGY QUARTZ (Quartz Production Complex), Wadi Om Atla — Kamiliya Mountain, Ain Sokhna, Suez, Egypt.
+                  Source: EGY QUARTZ (Quartz Production Complex), Wadi Om Atla — Kamiliya Mountain,
+                  Ain Sokhna, Suez, Egypt.
                 </div>
               </div>
             </motion.div>

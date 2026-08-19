@@ -14,7 +14,9 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                 {item.label}
               </Link>
             ) : (
-              <span aria-current="page" className="text-foreground">{item.label}</span>
+              <span aria-current="page" className="text-foreground">
+                {item.label}
+              </span>
             )}
             {i < items.length - 1 && (
               <ChevronRight className="h-3 w-3 rtl:rotate-180 opacity-60" aria-hidden="true" />

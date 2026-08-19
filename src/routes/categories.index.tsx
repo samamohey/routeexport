@@ -17,7 +17,10 @@ export const Route = createFileRoute("/categories/")({
           "Browse Route Export' four Egyptian export categories: marble slab alternatives, high-purity raw quartz aggregate, engineered EGY QUARTZ slabs, and agricultural fertilizers.",
       },
       { property: "og:title", content: "Product Categories | Route Export" },
-      { property: "og:description", content: "Four curated categories of Egyptian building surfaces for global projects." },
+      {
+        property: "og:description",
+        content: "Four curated categories of Egyptian building surfaces for global projects.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://routeexport.lovable.app/categories" },
     ],
@@ -29,8 +32,18 @@ export const Route = createFileRoute("/categories/")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://routeexport.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Categories", item: "https://routeexport.lovable.app/categories" },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://routeexport.lovable.app/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Categories",
+              item: "https://routeexport.lovable.app/categories",
+            },
           ],
         }),
       },
@@ -97,8 +110,18 @@ function CategoriesPage() {
               className="group block rounded-2xl bg-card border border-border overflow-hidden hover:border-gold/60 transition"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                <img src={c.img} alt={`${c.title} exported from Egypt`} width={800} height={600} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute top-4 left-4 rtl:left-auto rtl:right-4 font-display text-cream/90 text-lg bg-ink px-3 py-1 rounded-full">{c.tag}</div>
+                <img
+                  src={c.img}
+                  alt={`${c.title} exported from Egypt`}
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute top-4 left-4 rtl:left-auto rtl:right-4 font-display text-cream/90 text-lg bg-ink px-3 py-1 rounded-full">
+                  {c.tag}
+                </div>
               </div>
               <div className="p-7">
                 <h2 className="font-display text-2xl">{c.title}</h2>

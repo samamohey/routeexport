@@ -14,7 +14,11 @@ export const Route = createFileRoute("/about")({
           "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics.",
       },
       { property: "og:title", content: "About Route Export — Registered Egyptian Export House" },
-      { property: "og:description", content: "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics." },
+      {
+        property: "og:description",
+        content:
+          "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://routeexport.lovable.app/about" },
     ],
@@ -53,7 +57,11 @@ function AboutPage() {
             viewport={{ once: true }}
             src={factory}
             alt="Egyptian stone factory floor operated by Route Export partners"
-            width={800} height={600} loading="lazy" decoding="async" className="rounded-2xl aspect-[4/3] object-cover w-full"
+            width={800}
+            height={600}
+            loading="lazy"
+            decoding="async"
+            className="rounded-2xl aspect-[4/3] object-cover w-full"
           />
           <motion.img
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +70,11 @@ function AboutPage() {
             transition={{ delay: 0.15 }}
             src={kitchen}
             alt="Finished Egyptian quartz surface installed on a kitchen countertop"
-            width={800} height={600} loading="lazy" decoding="async" className="rounded-2xl aspect-[4/3] object-cover w-full md:mt-16"
+            width={800}
+            height={600}
+            loading="lazy"
+            decoding="async"
+            className="rounded-2xl aspect-[4/3] object-cover w-full md:mt-16"
           />
         </div>
       </section>
@@ -90,7 +102,9 @@ function AboutPage() {
             },
           ].map((b) => (
             <div key={b.title} className="rounded-2xl bg-card border border-border p-8">
-              <div className="h-10 w-10 rounded-full bg-gold/10 hairline-gold flex items-center justify-center text-gold font-display">◆</div>
+              <div className="h-10 w-10 rounded-full bg-gold/10 hairline-gold flex items-center justify-center text-gold font-display">
+                ◆
+              </div>
               <h2 className="mt-5 font-display text-2xl">{b.title}</h2>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{b.body}</p>
             </div>

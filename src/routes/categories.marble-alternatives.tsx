@@ -25,11 +25,20 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
           "Lightweight, moisture-resistant marble-look composite panels exported from Egypt. 60+ patterns, 1.22×2.80m, 3–6mm — ~1,200 pcs per 40' HC.",
       },
       { property: "og:title", content: "Marble Alternative Panels from Egypt | Route Export" },
-      { property: "og:description", content: "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects." },
+      {
+        property: "og:description",
+        content:
+          "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects.",
+      },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://routeexport.lovable.app/categories/marble-alternatives" },
+      {
+        property: "og:url",
+        content: "https://routeexport.lovable.app/categories/marble-alternatives",
+      },
     ],
-    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories/marble-alternatives" }],
+    links: [
+      { rel: "canonical", href: "https://routeexport.lovable.app/categories/marble-alternatives" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -60,7 +69,10 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
 });
 
 function stripHtml(html: string) {
-  return html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+  return html
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function MarblePage() {
@@ -128,7 +140,9 @@ function MarblePage() {
                 <span className="h-20 w-20 rounded-full bg-gold text-ink flex items-center justify-center shadow-2xl group-hover:scale-105 transition">
                   <Play className="h-8 w-8 ml-1" />
                 </span>
-                <span className="mt-6 text-xs uppercase tracking-[0.22em] text-gold">Factory Tour</span>
+                <span className="mt-6 text-xs uppercase tracking-[0.22em] text-gold">
+                  Factory Tour
+                </span>
                 <span className="mt-2 font-display text-2xl">
                   {isAr ? "شاهد خطوط الإنتاج" : "Inside our production lines"}
                 </span>
@@ -174,7 +188,9 @@ function MarblePage() {
           )}
           {isError && (
             <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-6 text-sm text-destructive">
-              {isAr ? "تعذّر تحميل الكتالوج. حاول لاحقًا." : "Could not load the catalog. Please try again later."}
+              {isAr
+                ? "تعذّر تحميل الكتالوج. حاول لاحقًا."
+                : "Could not load the catalog. Please try again later."}
             </div>
           )}
 
