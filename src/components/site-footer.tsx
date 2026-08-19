@@ -26,7 +26,7 @@ export function SiteFooter() {
         <div>
           <div className="text-xs uppercase tracking-[0.22em] text-gold mb-4">Contact</div>
           <ul className="space-y-2 text-sm text-cream/80">
-            <li>Cairo · Ain Sokhna, Egypt</li>
+            <li>Cairo, Egypt</li>
             <li>export@routeexport.example</li>
             <li>+20 (0) 155 996 7556</li>
           </ul>

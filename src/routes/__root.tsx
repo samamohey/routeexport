@@ -108,8 +108,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Registered Egyptian export house for marble slab alternatives, raw quartz, and engineered quartz slabs.",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Ain Sokhna",
-            addressRegion: "Suez",
+            addressLocality: "Cairo",
+            addressRegion: "Cairo",
             addressCountry: "EG",
           },
           contactPoint: {

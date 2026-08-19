@@ -98,7 +98,7 @@ function ContactPage() {
               <span className="h-10 w-10 rounded-full hairline-gold flex items-center justify-center text-gold shrink-0"><MapPin className="h-4 w-4" /></span>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">{isAr ? "العنوان" : "Address"}</div>
-                <div className="font-display text-lg">{isAr ? "القاهرة · العين السخنة، مصر" : "Cairo · Ain Sokhna, Egypt"}</div>
+                <div className="font-display text-lg">{isAr ? "القاهرة، مصر" : "Cairo, Egypt"}</div>
               </div>
             </li>
           </ul>
