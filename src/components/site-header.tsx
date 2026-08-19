@@ -18,7 +18,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/60">
       <div className="container-x flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full hairline-gold text-gradient-gold font-display text-lg">N</span>
+          <BrandLogo className="h-9 w-9 shrink-0" />
           <div className="leading-tight">
             <div className="font-display text-lg tracking-wide">ROUTE EXPORT</div>
             <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Egypt · Export House</div>
