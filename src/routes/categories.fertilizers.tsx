@@ -9,21 +9,21 @@ import catalogAsset from "@/assets/alsafwa-fertilizers-catalog.pdf.asset.json";
 export const Route = createFileRoute("/categories/fertilizers")({
   head: () => ({
     meta: [
-      { title: "Egyptian Agricultural Fertilizers | Nile Stone" },
+      { title: "Egyptian Agricultural Fertilizers | Route Export" },
       {
         name: "description",
         content:
           "Export-grade Egyptian water-soluble NPK fertilizers and micronutrient chelates: 19-19-19, 20-20-20, 12-50-12, 6-6-43, potassium citrate, humic acid and more.",
       },
-      { property: "og:title", content: "Egyptian Agricultural Fertilizers | Nile Stone" },
+      { property: "og:title", content: "Egyptian Agricultural Fertilizers | Route Export" },
       {
         property: "og:description",
         content: "Water-soluble NPK blends, potassium citrate and chelated micronutrients produced in Egypt for export.",
       },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/categories/fertilizers" },
+      { property: "og:url", content: "https://routeexport.lovable.app/categories/fertilizers" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/fertilizers" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories/fertilizers" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/categories/fertilizers")({
           "@type": "Product",
           name: "Egyptian Water-Soluble NPK Fertilizers",
           category: "Agricultural Fertilizers",
-          brand: { "@type": "Brand", name: "Nile Stone Exports" },
+          brand: { "@type": "Brand", name: "Route Export" },
           countryOfOrigin: "EG",
           description:
             "Water-soluble NPK fertilizer blends, potassium citrate formulations and chelated micronutrients manufactured in Egypt for agricultural export markets.",

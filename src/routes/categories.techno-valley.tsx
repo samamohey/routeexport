@@ -9,21 +9,21 @@ import profileAsset from "@/assets/techno-valley-profile.pdf.asset.json";
 export const Route = createFileRoute("/categories/techno-valley")({
   head: () => ({
     meta: [
-      { title: "Fertilizers & Crop Protection | Nile Stone" },
+      { title: "Fertilizers & Crop Protection | Route Export" },
       {
         name: "description",
         content:
           "Egyptian ISO-certified fertilizers and crop protection: water-soluble NPK grades, potassium sulphate, MAP, humic and fulvic acids, chelated micronutrients and bio-stimulants.",
       },
-      { property: "og:title", content: "Fertilizers & Crop Protection | Nile Stone" },
+      { property: "og:title", content: "Fertilizers & Crop Protection | Route Export" },
       {
         property: "og:description",
         content: "ISO-certified Egyptian fertilizers, micronutrients and bio-stimulants prepared for export.",
       },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/categories/techno-valley" },
+      { property: "og:url", content: "https://routeexport.lovable.app/categories/techno-valley" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/techno-valley" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories/techno-valley" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/categories/techno-valley")({
           "@type": "Product",
           name: "Egyptian Fertilizers & Crop Protection Inputs",
           category: "Agricultural Inputs",
-          brand: { "@type": "Brand", name: "Nile Stone Exports" },
+          brand: { "@type": "Brand", name: "Route Export" },
           countryOfOrigin: "EG",
           description:
             "ISO 9001 and ISO 14001 certified Egyptian fertilizers, water-soluble NPK grades, micronutrient chelates, bio-stimulants and crop protection products for export markets.",

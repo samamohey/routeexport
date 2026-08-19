@@ -7,18 +7,18 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Nile Stone Exports — Registered Egyptian Export House" },
+      { title: "About Route Export — Registered Egyptian Export House" },
       {
         name: "description",
         content:
           "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics.",
       },
-      { property: "og:title", content: "About Nile Stone Exports — Registered Egyptian Export House" },
+      { property: "og:title", content: "About Route Export — Registered Egyptian Export House" },
       { property: "og:description", content: "Registered Egyptian export house for marble alternatives, raw quartz, and engineered quartz slabs. Certified factories, transparent logistics." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/about" },
+      { property: "og:url", content: "https://routeexport.lovable.app/about" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/about" }],
   }),
   component: AboutPage,
 });
@@ -52,7 +52,7 @@ function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             src={factory}
-            alt="Egyptian stone factory floor operated by Nile Stone Exports partners"
+            alt="Egyptian stone factory floor operated by Route Export partners"
             width={800} height={600} loading="lazy" decoding="async" className="rounded-2xl aspect-[4/3] object-cover w-full"
           />
           <motion.img

@@ -10,18 +10,18 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/categories/")({
   head: () => ({
     meta: [
-      { title: "Product Categories | Nile Stone Exports" },
+      { title: "Product Categories | Route Export" },
       {
         name: "description",
         content:
-          "Browse Nile Stone Exports' four Egyptian export categories: marble slab alternatives, high-purity raw quartz aggregate, engineered EGY QUARTZ slabs, and agricultural fertilizers.",
+          "Browse Route Export' four Egyptian export categories: marble slab alternatives, high-purity raw quartz aggregate, engineered EGY QUARTZ slabs, and agricultural fertilizers.",
       },
-      { property: "og:title", content: "Product Categories | Nile Stone Exports" },
+      { property: "og:title", content: "Product Categories | Route Export" },
       { property: "og:description", content: "Four curated categories of Egyptian building surfaces for global projects." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/categories" },
+      { property: "og:url", content: "https://routeexport.lovable.app/categories" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -29,8 +29,8 @@ export const Route = createFileRoute("/categories/")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://nile-exports.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Categories", item: "https://nile-exports.lovable.app/categories" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://routeexport.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Categories", item: "https://routeexport.lovable.app/categories" },
           ],
         }),
       },

@@ -10,26 +10,26 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Nile Stone Exports | Export Enquiries" },
+      { title: "Contact Route Export | Export Enquiries" },
       {
         name: "description",
         content:
-          "Contact Nile Stone Exports for quotes, samples, and shipping enquiries. Our export desk replies within 24 hours in English and Arabic.",
+          "Contact Route Export for quotes, samples, and shipping enquiries. Our export desk replies within 24 hours in English and Arabic.",
       },
-      { property: "og:title", content: "Contact Nile Stone Exports | Export Enquiries" },
-      { property: "og:description", content: "Contact Nile Stone Exports for quotes, samples, and shipping enquiries. Our export desk replies within 24 hours in English and Arabic." },
+      { property: "og:title", content: "Contact Route Export | Export Enquiries" },
+      { property: "og:description", content: "Contact Route Export for quotes, samples, and shipping enquiries. Our export desk replies within 24 hours in English and Arabic." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/contact" },
+      { property: "og:url", content: "https://routeexport.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/contact" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          name: "Contact Nile Stone Exports",
-          url: "https://nile-exports.lovable.app/contact",
+          name: "Contact Route Export",
+          url: "https://routeexport.lovable.app/contact",
         }),
       },
     ],
@@ -84,7 +84,7 @@ function ContactPage() {
               <span className="h-10 w-10 rounded-full hairline-gold flex items-center justify-center text-gold shrink-0"><Mail className="h-4 w-4" /></span>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">{isAr ? "البريد الإلكتروني" : "Email"}</div>
-                <a href="mailto:export@nilestone.example" className="font-display text-lg hover:text-gold">export@nilestone.example</a>
+                <a href="mailto:export@routeexport.example" className="font-display text-lg hover:text-gold">export@routeexport.example</a>
               </div>
             </li>
             <li className="flex items-start gap-4">
@@ -98,7 +98,7 @@ function ContactPage() {
               <span className="h-10 w-10 rounded-full hairline-gold flex items-center justify-center text-gold shrink-0"><MapPin className="h-4 w-4" /></span>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">{isAr ? "العنوان" : "Address"}</div>
-                <div className="font-display text-lg">{isAr ? "القاهرة · العين السخنة، مصر" : "Cairo · Ain Sokhna, Egypt"}</div>
+                <div className="font-display text-lg">{isAr ? "القاهرة، مصر" : "Cairo, Egypt"}</div>
               </div>
             </li>
           </ul>

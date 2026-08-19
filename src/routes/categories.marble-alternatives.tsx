@@ -18,18 +18,18 @@ type Product = {
 export const Route = createFileRoute("/categories/marble-alternatives")({
   head: () => ({
     meta: [
-      { title: "Marble Alternative Panels from Egypt | Nile Stone" },
+      { title: "Marble Alternative Panels from Egypt | Route Export" },
       {
         name: "description",
         content:
           "Lightweight, moisture-resistant marble-look composite panels exported from Egypt. 60+ patterns, 1.22×2.80m, 3–6mm — ~1,200 pcs per 40' HC.",
       },
-      { property: "og:title", content: "Marble Alternative Panels from Egypt | Nile Stone" },
+      { property: "og:title", content: "Marble Alternative Panels from Egypt | Route Export" },
       { property: "og:description", content: "60+ marble-look composite panels engineered in Egypt for global residential and commercial projects." },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/categories/marble-alternatives" },
+      { property: "og:url", content: "https://routeexport.lovable.app/categories/marble-alternatives" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/marble-alternatives" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories/marble-alternatives" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/categories/marble-alternatives")({
           "@type": "Product",
           name: "Marble Slab Alternative Panels",
           category: "Building Materials",
-          brand: { "@type": "Brand", name: "Nile Stone Exports" },
+          brand: { "@type": "Brand", name: "Route Export" },
           countryOfOrigin: "EG",
           description:
             "Lightweight composite marble-look panels, 60+ patterns, 1.22×2.80m, 3–6mm thickness — exported from Egypt.",
