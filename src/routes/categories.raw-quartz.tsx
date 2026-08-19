@@ -7,18 +7,18 @@ import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 export const Route = createFileRoute("/categories/raw-quartz")({
   head: () => ({
     meta: [
-      { title: "Raw Quartz Aggregate from Egypt | Nile Stone" },
+      { title: "Raw Quartz Aggregate from Egypt | Route Export" },
       {
         name: "description",
         content:
           "High-purity Egyptian raw quartz aggregate (SiO₂ > 99.5%) in four particle grades: 45µm, 100–300µm, 300–700µm, 700–1200µm. Full ICP analysis and grain distribution.",
       },
-      { property: "og:title", content: "Raw Quartz Aggregate from Egypt | Nile Stone" },
+      { property: "og:title", content: "Raw Quartz Aggregate from Egypt | Route Export" },
       { property: "og:description", content: "Four grades of high-purity Egyptian quartz for glass, ceramics, and engineered stone." },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/categories/raw-quartz" },
+      { property: "og:url", content: "https://routeexport.lovable.app/categories/raw-quartz" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/raw-quartz" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories/raw-quartz" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/categories/raw-quartz")({
           "@type": "Product",
           name: "Raw Quartz Aggregate (SiO₂ > 99.5%)",
           category: "Industrial Minerals",
-          brand: { "@type": "Brand", name: "Nile Stone Exports" },
+          brand: { "@type": "Brand", name: "Route Export" },
           countryOfOrigin: "EG",
           description:
             "Egyptian high-purity raw quartz from Mount Kamiliya, Ain Sokhna, in four particle grades for glass, ceramics, and engineered stone.",
@@ -250,7 +250,7 @@ function RawQuartzPage() {
       <section className="py-16">
         <div className="container-x text-center">
           <a
-            href="mailto:export@nilestone.example?subject=Raw%20Quartz%20Datasheet%20Request"
+            href="mailto:export@routeexport.example?subject=Raw%20Quartz%20Datasheet%20Request"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition"
           >
             <Download className="h-4 w-4" />

@@ -34,7 +34,7 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      item: `https://nile-exports.lovable.app${it.path}`,
+      item: `https://routeexport.lovable.app${it.path}`,
     })),
   };
 }

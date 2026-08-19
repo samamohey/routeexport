@@ -11,18 +11,18 @@ import { Breadcrumbs, breadcrumbJsonLd } from "@/components/breadcrumbs";
 export const Route = createFileRoute("/categories/quartz-slabs")({
   head: () => ({
     meta: [
-      { title: "Engineered Quartz Slabs from Egypt | Nile Stone" },
+      { title: "Engineered Quartz Slabs from Egypt | Route Export" },
       {
         name: "description",
         content:
           "Egyptian engineered quartz slabs for countertops, floors, and cladding. Jumbo 330×165cm and 310×152cm. Thickness 15/20/30mm. Polished and matte finishes.",
       },
-      { property: "og:title", content: "Engineered Quartz Slabs from Egypt | Nile Stone" },
+      { property: "og:title", content: "Engineered Quartz Slabs from Egypt | Route Export" },
       { property: "og:description", content: "The original Egyptian quartz surface: 15/20/30mm slabs in seamless jumbo sizes." },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/categories/quartz-slabs" },
+      { property: "og:url", content: "https://routeexport.lovable.app/categories/quartz-slabs" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/categories/quartz-slabs" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/categories/quartz-slabs" }],
     scripts: [
       {
         type: "application/ld+json",

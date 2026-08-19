@@ -12,29 +12,29 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Egyptian Stone Exporter | Nile Stone Exports" },
+      { title: "Egyptian Stone Exporter | Route Export" },
       {
         name: "description",
         content:
           "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
       },
-      { property: "og:title", content: "Egyptian Stone Exporter | Nile Stone Exports" },
+      { property: "og:title", content: "Egyptian Stone Exporter | Route Export" },
       {
         property: "og:description",
         content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://nile-exports.lovable.app/" },
+      { property: "og:url", content: "https://routeexport.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://nile-exports.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://routeexport.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Nile Stone Exports",
-          url: "https://nile-exports.lovable.app",
+          name: "Route Export",
+          url: "https://routeexport.lovable.app",
           inLanguage: ["en", "ar"],
         }),
       },
@@ -191,7 +191,7 @@ function HomePage() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                     <img
                       src={c.img}
-                      alt={`${c.title} exported from Egypt by Nile Stone Exports`}
+                      alt={`${c.title} exported from Egypt by Route Export`}
                       width={800}
                       height={600}
                       loading="lazy"
@@ -221,7 +221,7 @@ function HomePage() {
       <section className="py-24 bg-ink text-cream">
         <div className="container-x grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <span className="text-xs uppercase tracking-[0.22em] text-gold">Why Nile Stone</span>
+            <span className="text-xs uppercase tracking-[0.22em] text-gold">Why Route Export</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl text-cream">
               {isAr ? "شركة مصرية موثوقة تُصدّر بمعايير عالمية." : "A trusted Egyptian house exporting to global standards."}
             </h2>
@@ -245,7 +245,7 @@ function HomePage() {
             </ul>
           </div>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <img src={factory} alt="Nile Stone Exports partner factory floor in Ain Sokhna, Egypt" width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+            <img src={factory} alt="Route Export partner factory floor in Ain Sokhna, Egypt" width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
             <div className="absolute inset-x-6 bottom-6 bg-cream/95 text-ink rounded-xl p-5">
               <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Facility</div>
               <div className="font-display text-xl mt-1">Ain Sokhna · Suez Governorate</div>

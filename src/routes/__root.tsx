@@ -70,14 +70,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "author", content: "Nile Stone Exports" },
-      { property: "og:site_name", content: "Nile Stone Exports" },
+      { name: "author", content: "Route Export" },
+      { property: "og:site_name", content: "Route Export" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0B0B0B" },
-      { title: "Egyptian Stone Exporter | Nile Stone Exports" },
-      { property: "og:title", content: "Egyptian Stone Exporter | Nile Stone Exports" },
-      { name: "twitter:title", content: "Egyptian Stone Exporter | Nile Stone Exports" },
+      { title: "Egyptian Stone Exporter | Route Export" },
+      { property: "og:title", content: "Egyptian Stone Exporter | Route Export" },
+      { name: "twitter:title", content: "Egyptian Stone Exporter | Route Export" },
       { name: "description", content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide." },
       { property: "og:description", content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide." },
       { name: "twitter:description", content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide." },
@@ -91,9 +91,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Tajawal:wght@400;500;700&display=swap" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "alternate", hrefLang: "en", href: "https://nile-exports.lovable.app/" },
-      { rel: "alternate", hrefLang: "ar", href: "https://nile-exports.lovable.app/" },
-      { rel: "alternate", hrefLang: "x-default", href: "https://nile-exports.lovable.app/" },
+      { rel: "alternate", hrefLang: "en", href: "https://routeexport.lovable.app/" },
+      { rel: "alternate", hrefLang: "ar", href: "https://routeexport.lovable.app/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://routeexport.lovable.app/" },
     ],
     scripts: [
       {
@@ -101,9 +101,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Nile Stone Exports",
-          url: "https://nile-exports.lovable.app",
-          logo: "https://nile-exports.lovable.app/favicon.ico",
+          name: "Route Export",
+          url: "https://routeexport.lovable.app",
+          logo: "https://routeexport.lovable.app/favicon.ico",
           description:
             "Registered Egyptian export house for marble slab alternatives, raw quartz, and engineered quartz slabs.",
           address: {
@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           contactPoint: {
             "@type": "ContactPoint",
             contactType: "sales",
-            email: "export@nilestone.example",
+            email: "export@routeexport.example",
             telephone: "+20-155-996-7556",
             availableLanguage: ["en", "ar"],
           },

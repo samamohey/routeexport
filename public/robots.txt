@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://nile-exports.lovable.app/sitemap.xml
+Sitemap: https://routeexport.lovable.app/sitemap.xml
