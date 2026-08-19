@@ -2,6 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
+import { BrandLogo } from "@/components/brand-logo";
+
 
 export function SiteHeader() {
   const { t, lang, setLang } = useI18n();
