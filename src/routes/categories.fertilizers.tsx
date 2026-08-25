@@ -18,7 +18,8 @@ export const Route = createFileRoute("/categories/fertilizers")({
       { property: "og:title", content: "Egyptian Agricultural Fertilizers | Route Export" },
       {
         property: "og:description",
-        content: "Water-soluble NPK blends, potassium citrate and chelated micronutrients produced in Egypt for export.",
+        content:
+          "Water-soluble NPK blends, potassium citrate and chelated micronutrients produced in Egypt for export.",
       },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://routeexport.lovable.app/categories/fertilizers" },
@@ -143,13 +144,51 @@ const lines: Line[] = [
       ar: "سلسلة أسمدة ذائبة في الماء للإضافة الأرضية وأنظمة التنقيط والرش.",
     },
     products: [
-      { name: "Alsafwa Saif 19-19-19", npk: "19 – 19 – 19", use: { en: "Balanced growth across all stages.", ar: "نمو متوازن في جميع المراحل." } },
-      { name: "Alsafwa Saif 20-20-20", npk: "20 – 20 – 20", use: { en: "High-solubility balanced feed.", ar: "تركيبة متوازنة عالية الذوبان." } },
-      { name: "Alsafwa Saif 19-15-15", npk: "19 – 15 – 15", use: { en: "High nitrogen for vegetative build-up.", ar: "نيتروجين عالٍ لبناء المجموع الخضري." } },
-      { name: "Alsafwa Saif 12-50-12", npk: "12 – 50 – 12", use: { en: "Root activation, flowering and fruit set.", ar: "تنشيط الجذور والإزهار والعقد." } },
-      { name: "Alsafwa Saif 6-6-43", npk: "6 – 6 – 43", use: { en: "Productive stage — size, hardness and colour.", ar: "مرحلة الإنتاج — الحجم والصلابة والتلوين." } },
-      { name: "Alsafwa Saif 0-0-45", npk: "0 – 0 – 45", extra: "Potassium citrate", use: { en: "Fast-response potassium source.", ar: "مصدر بوتاسيوم سريع الاستجابة." } },
-      { name: "Alsafwa Saif 11-0-45", npk: "11 – 0 – 45", use: { en: "Fruit growth and sugar accumulation.", ar: "نمو الثمار وزيادة نسبة السكريات." } },
+      {
+        name: "Alsafwa Saif 19-19-19",
+        npk: "19 – 19 – 19",
+        use: { en: "Balanced growth across all stages.", ar: "نمو متوازن في جميع المراحل." },
+      },
+      {
+        name: "Alsafwa Saif 20-20-20",
+        npk: "20 – 20 – 20",
+        use: { en: "High-solubility balanced feed.", ar: "تركيبة متوازنة عالية الذوبان." },
+      },
+      {
+        name: "Alsafwa Saif 19-15-15",
+        npk: "19 – 15 – 15",
+        use: {
+          en: "High nitrogen for vegetative build-up.",
+          ar: "نيتروجين عالٍ لبناء المجموع الخضري.",
+        },
+      },
+      {
+        name: "Alsafwa Saif 12-50-12",
+        npk: "12 – 50 – 12",
+        use: {
+          en: "Root activation, flowering and fruit set.",
+          ar: "تنشيط الجذور والإزهار والعقد.",
+        },
+      },
+      {
+        name: "Alsafwa Saif 6-6-43",
+        npk: "6 – 6 – 43",
+        use: {
+          en: "Productive stage — size, hardness and colour.",
+          ar: "مرحلة الإنتاج — الحجم والصلابة والتلوين.",
+        },
+      },
+      {
+        name: "Alsafwa Saif 0-0-45",
+        npk: "0 – 0 – 45",
+        extra: "Potassium citrate",
+        use: { en: "Fast-response potassium source.", ar: "مصدر بوتاسيوم سريع الاستجابة." },
+      },
+      {
+        name: "Alsafwa Saif 11-0-45",
+        npk: "11 – 0 – 45",
+        use: { en: "Fruit growth and sugar accumulation.", ar: "نمو الثمار وزيادة نسبة السكريات." },
+      },
     ],
   },
   {
@@ -159,12 +198,37 @@ const lines: Line[] = [
       ar: "درجات NPK ذائبة عالية النقاء لبرامج التسميد الاحترافية.",
     },
     products: [
-      { name: "Safwa Fert 19-19-19", npk: "19 – 19 – 19", use: { en: "All-stage balanced nutrition.", ar: "تغذية متوازنة لكل المراحل." } },
-      { name: "Safwa Fert 20-20-20", npk: "20 – 20 – 20", use: { en: "Balanced, highly soluble.", ar: "متوازن وعالي الذوبان." } },
-      { name: "Safwa Fert 19-15-15", npk: "19 – 15 – 15", use: { en: "Nitrogen-led vegetative growth.", ar: "نمو خضري بقيادة النيتروجين." } },
-      { name: "Safwa Fert 6-6-43", npk: "6 – 6 – 43", use: { en: "Potassium-rich productive feed.", ar: "تغذية إنتاجية غنية بالبوتاسيوم." } },
-      { name: "Safwa Fert 0-0-45", npk: "0 – 0 – 45", extra: "Potassium citrate", use: { en: "Sizing and quality improvement.", ar: "تكبير الثمار وتحسين الجودة." } },
-      { name: "Safwa Fert 11-0-45", npk: "11 – 0 – 45", use: { en: "Fruit filling and colouring.", ar: "امتلاء الثمار وتحسين اللون." } },
+      {
+        name: "Safwa Fert 19-19-19",
+        npk: "19 – 19 – 19",
+        use: { en: "All-stage balanced nutrition.", ar: "تغذية متوازنة لكل المراحل." },
+      },
+      {
+        name: "Safwa Fert 20-20-20",
+        npk: "20 – 20 – 20",
+        use: { en: "Balanced, highly soluble.", ar: "متوازن وعالي الذوبان." },
+      },
+      {
+        name: "Safwa Fert 19-15-15",
+        npk: "19 – 15 – 15",
+        use: { en: "Nitrogen-led vegetative growth.", ar: "نمو خضري بقيادة النيتروجين." },
+      },
+      {
+        name: "Safwa Fert 6-6-43",
+        npk: "6 – 6 – 43",
+        use: { en: "Potassium-rich productive feed.", ar: "تغذية إنتاجية غنية بالبوتاسيوم." },
+      },
+      {
+        name: "Safwa Fert 0-0-45",
+        npk: "0 – 0 – 45",
+        extra: "Potassium citrate",
+        use: { en: "Sizing and quality improvement.", ar: "تكبير الثمار وتحسين الجودة." },
+      },
+      {
+        name: "Safwa Fert 11-0-45",
+        npk: "11 – 0 – 45",
+        use: { en: "Fruit filling and colouring.", ar: "امتلاء الثمار وتحسين اللون." },
+      },
     ],
   },
   {
@@ -174,12 +238,37 @@ const lines: Line[] = [
       ar: "درجات NPK ذائبة مُصاغة لجميع نظم الري والاستخدام الورقي.",
     },
     products: [
-      { name: "Alsafwa Dury 19-19-19", npk: "19 – 19 – 19", use: { en: "Balanced base fertilizer.", ar: "سماد أساسي متوازن." } },
-      { name: "Alsafwa Dury 20-20-20", npk: "20 – 20 – 20", use: { en: "Balanced high-solubility grade.", ar: "درجة متوازنة عالية الذوبان." } },
-      { name: "Alsafwa Dury 19-15-15", npk: "19 – 15 – 15", use: { en: "Vegetative growth support.", ar: "دعم النمو الخضري." } },
-      { name: "Alsafwa Dury 12-50-12", npk: "12 – 50 – 12", use: { en: "Rooting, flowering and fruit set.", ar: "التجذير والإزهار والعقد." } },
-      { name: "Alsafwa Dury 6-6-43", npk: "6 – 6 – 43", use: { en: "Productive-stage potassium.", ar: "بوتاسيوم لمرحلة الإنتاج." } },
-      { name: "Alsafwa Dury 11-0-45", npk: "11 – 0 – 45", extra: "49% potassium citrate variant", use: { en: "Rapid potassium uptake.", ar: "امتصاص سريع للبوتاسيوم." } },
+      {
+        name: "Alsafwa Dury 19-19-19",
+        npk: "19 – 19 – 19",
+        use: { en: "Balanced base fertilizer.", ar: "سماد أساسي متوازن." },
+      },
+      {
+        name: "Alsafwa Dury 20-20-20",
+        npk: "20 – 20 – 20",
+        use: { en: "Balanced high-solubility grade.", ar: "درجة متوازنة عالية الذوبان." },
+      },
+      {
+        name: "Alsafwa Dury 19-15-15",
+        npk: "19 – 15 – 15",
+        use: { en: "Vegetative growth support.", ar: "دعم النمو الخضري." },
+      },
+      {
+        name: "Alsafwa Dury 12-50-12",
+        npk: "12 – 50 – 12",
+        use: { en: "Rooting, flowering and fruit set.", ar: "التجذير والإزهار والعقد." },
+      },
+      {
+        name: "Alsafwa Dury 6-6-43",
+        npk: "6 – 6 – 43",
+        use: { en: "Productive-stage potassium.", ar: "بوتاسيوم لمرحلة الإنتاج." },
+      },
+      {
+        name: "Alsafwa Dury 11-0-45",
+        npk: "11 – 0 – 45",
+        extra: "49% potassium citrate variant",
+        use: { en: "Rapid potassium uptake.", ar: "امتصاص سريع للبوتاسيوم." },
+      },
     ],
   },
   {
@@ -189,10 +278,30 @@ const lines: Line[] = [
       ar: "تركيبات سائلة ومركّزة متخصصة لبرامج الرش الورقي.",
     },
     products: [
-      { name: "Trikal 25-18-25", npk: "25 – 18 – 25", extra: "S 6.5%", use: { en: "Concentrated balanced foliar feed.", ar: "تغذية ورقية مركّزة متوازنة." } },
-      { name: "Trikal 6-43-6", npk: "6 – 43 – 6", use: { en: "Phosphorus push for rooting and flowering.", ar: "دفعة فوسفور للتجذير والإزهار." } },
-      { name: "Twenty Mix", npk: "20 – 20 – 20", use: { en: "Balanced multi-purpose mix.", ar: "خليط متوازن متعدد الأغراض." } },
-      { name: "Bono Mix (High P)", npk: "4 – 44 – 4", use: { en: "Flowering and fruit-set booster.", ar: "منشّط الإزهار والعقد." } },
+      {
+        name: "Trikal 25-18-25",
+        npk: "25 – 18 – 25",
+        extra: "S 6.5%",
+        use: { en: "Concentrated balanced foliar feed.", ar: "تغذية ورقية مركّزة متوازنة." },
+      },
+      {
+        name: "Trikal 6-43-6",
+        npk: "6 – 43 – 6",
+        use: {
+          en: "Phosphorus push for rooting and flowering.",
+          ar: "دفعة فوسفور للتجذير والإزهار.",
+        },
+      },
+      {
+        name: "Twenty Mix",
+        npk: "20 – 20 – 20",
+        use: { en: "Balanced multi-purpose mix.", ar: "خليط متوازن متعدد الأغراض." },
+      },
+      {
+        name: "Bono Mix (High P)",
+        npk: "4 – 44 – 4",
+        use: { en: "Flowering and fruit-set booster.", ar: "منشّط الإزهار والعقد." },
+      },
     ],
   },
 ];
@@ -200,18 +309,81 @@ const lines: Line[] = [
 type Specialty = { name: string; composition: string; use: { en: string; ar: string } };
 
 const specialties: Specialty[] = [
-  { name: "Humi Plus", composition: "Humic 32.5% · Fulvic 4% · Fe 0.8%", use: { en: "Soil conditioning and nutrient uptake.", ar: "تحسين التربة ورفع كفاءة امتصاص العناصر." } },
-  { name: "Multi Element", composition: "Chelated micro-element mix", use: { en: "Corrects multiple deficiencies at once.", ar: "يعالج نقص عدة عناصر في وقت واحد." } },
-  { name: "Elite Fero", composition: "Chelated iron", use: { en: "Prevents and treats iron chlorosis.", ar: "الوقاية من اصفرار نقص الحديد وعلاجه." } },
-  { name: "Safcon Zinc 6% / 13%", composition: "Chelated zinc", use: { en: "Zinc supply for growth hormones.", ar: "إمداد الزنك اللازم لهرمونات النمو." } },
-  { name: "Elite Manganese 14%", composition: "Chelated manganese", use: { en: "Supports enzymes and photosynthesis.", ar: "يدعم الإنزيمات والتمثيل الضوئي." } },
-  { name: "Mini Copper 6%", composition: "Copper", use: { en: "Strengthens tissues and disease tolerance.", ar: "يقوّي الأنسجة ويرفع تحمّل الأمراض." } },
-  { name: "Safo Calboro", composition: "Calcium + Boron", use: { en: "Fruit firmness and reduced flower drop.", ar: "صلابة الثمار وتقليل تساقط الأزهار." } },
-  { name: "Ultra Roots", composition: "Root stimulant blend", use: { en: "Accelerates root development after planting.", ar: "يسرّع نمو الجذور بعد الزراعة." } },
-  { name: "Safo Sal", composition: "N 6% · Fulvic 15% · CaO 12%", use: { en: "Helps crops handle saline soils.", ar: "يساعد المحاصيل على تحمّل الأراضي الملحية." } },
-  { name: "Fort K", composition: "Potassium concentrate", use: { en: "Late-season potassium top-up.", ar: "دعم بوتاسي في مراحل الإنتاج المتأخرة." } },
-  { name: "Top Form", composition: "Liquid growth formula", use: { en: "General-purpose growth support.", ar: "دعم عام للنمو." } },
-  { name: "Safo Potas 15", composition: "K₂O 15%", use: { en: "Light potassium maintenance dose.", ar: "جرعة بوتاسيوم خفيفة للصيانة." } },
+  {
+    name: "Humi Plus",
+    composition: "Humic 32.5% · Fulvic 4% · Fe 0.8%",
+    use: {
+      en: "Soil conditioning and nutrient uptake.",
+      ar: "تحسين التربة ورفع كفاءة امتصاص العناصر.",
+    },
+  },
+  {
+    name: "Multi Element",
+    composition: "Chelated micro-element mix",
+    use: { en: "Corrects multiple deficiencies at once.", ar: "يعالج نقص عدة عناصر في وقت واحد." },
+  },
+  {
+    name: "Elite Fero",
+    composition: "Chelated iron",
+    use: { en: "Prevents and treats iron chlorosis.", ar: "الوقاية من اصفرار نقص الحديد وعلاجه." },
+  },
+  {
+    name: "Safcon Zinc 6% / 13%",
+    composition: "Chelated zinc",
+    use: { en: "Zinc supply for growth hormones.", ar: "إمداد الزنك اللازم لهرمونات النمو." },
+  },
+  {
+    name: "Elite Manganese 14%",
+    composition: "Chelated manganese",
+    use: { en: "Supports enzymes and photosynthesis.", ar: "يدعم الإنزيمات والتمثيل الضوئي." },
+  },
+  {
+    name: "Mini Copper 6%",
+    composition: "Copper",
+    use: {
+      en: "Strengthens tissues and disease tolerance.",
+      ar: "يقوّي الأنسجة ويرفع تحمّل الأمراض.",
+    },
+  },
+  {
+    name: "Safo Calboro",
+    composition: "Calcium + Boron",
+    use: {
+      en: "Fruit firmness and reduced flower drop.",
+      ar: "صلابة الثمار وتقليل تساقط الأزهار.",
+    },
+  },
+  {
+    name: "Ultra Roots",
+    composition: "Root stimulant blend",
+    use: {
+      en: "Accelerates root development after planting.",
+      ar: "يسرّع نمو الجذور بعد الزراعة.",
+    },
+  },
+  {
+    name: "Safo Sal",
+    composition: "N 6% · Fulvic 15% · CaO 12%",
+    use: {
+      en: "Helps crops handle saline soils.",
+      ar: "يساعد المحاصيل على تحمّل الأراضي الملحية.",
+    },
+  },
+  {
+    name: "Fort K",
+    composition: "Potassium concentrate",
+    use: { en: "Late-season potassium top-up.", ar: "دعم بوتاسي في مراحل الإنتاج المتأخرة." },
+  },
+  {
+    name: "Top Form",
+    composition: "Liquid growth formula",
+    use: { en: "General-purpose growth support.", ar: "دعم عام للنمو." },
+  },
+  {
+    name: "Safo Potas 15",
+    composition: "K₂O 15%",
+    use: { en: "Light potassium maintenance dose.", ar: "جرعة بوتاسيوم خفيفة للصيانة." },
+  },
 ];
 
 function FertilizersPage() {
@@ -248,7 +420,9 @@ function FertilizersPage() {
               >
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Line</div>
                 <div className="mt-1 font-display text-xl">{l.line}</div>
-                <div className="mt-2 text-xs text-gold">{l.products.length} {isAr ? "منتج" : "products"}</div>
+                <div className="mt-2 text-xs text-gold">
+                  {l.products.length} {isAr ? "منتج" : "products"}
+                </div>
               </a>
             ))}
           </div>
@@ -288,13 +462,18 @@ function FertilizersPage() {
 
               <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {l.products.map((p) => (
-                  <div key={p.name} className="rounded-2xl bg-card border border-border p-6 hover:border-gold/60 transition">
+                  <div
+                    key={p.name}
+                    className="rounded-2xl bg-card border border-border p-6 hover:border-gold/60 transition"
+                  >
                     <div className="flex items-start justify-between gap-4">
                       <h3 className="font-display text-xl leading-tight">{p.name}</h3>
                       <Leaf className="h-4 w-4 text-gold shrink-0 mt-1" />
                     </div>
                     <div className="mt-4 font-mono text-lg text-gold">{p.npk}</div>
-                    <div className="text-[11px] uppercase tracking-widest text-muted-foreground">N – P₂O₅ – K₂O</div>
+                    <div className="text-[11px] uppercase tracking-widest text-muted-foreground">
+                      N – P₂O₅ – K₂O
+                    </div>
                     {p.extra && <div className="mt-2 text-xs text-muted-foreground">{p.extra}</div>}
                     <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
                       {isAr ? p.use.ar : p.use.en}
@@ -321,9 +500,15 @@ function FertilizersPage() {
               <table className="w-full text-sm">
                 <thead className="bg-muted/50">
                   <tr className="text-start">
-                    <th scope="col" className="px-5 py-3 text-start font-medium">{isAr ? "المنتج" : "Product"}</th>
-                    <th scope="col" className="px-5 py-3 text-start font-medium">{isAr ? "التركيب" : "Composition"}</th>
-                    <th scope="col" className="px-5 py-3 text-start font-medium">{isAr ? "الاستخدام" : "Use"}</th>
+                    <th scope="col" className="px-5 py-3 text-start font-medium">
+                      {isAr ? "المنتج" : "Product"}
+                    </th>
+                    <th scope="col" className="px-5 py-3 text-start font-medium">
+                      {isAr ? "التركيب" : "Composition"}
+                    </th>
+                    <th scope="col" className="px-5 py-3 text-start font-medium">
+                      {isAr ? "الاستخدام" : "Use"}
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -331,7 +516,9 @@ function FertilizersPage() {
                     <tr key={s.name} className="border-t border-border/60">
                       <td className="px-5 py-3 font-medium">{s.name}</td>
                       <td className="px-5 py-3 text-muted-foreground">{s.composition}</td>
-                      <td className="px-5 py-3 text-muted-foreground">{isAr ? s.use.ar : s.use.en}</td>
+                      <td className="px-5 py-3 text-muted-foreground">
+                        {isAr ? s.use.ar : s.use.en}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -344,7 +531,9 @@ function FertilizersPage() {
       <section className="py-16 border-t border-border">
         <div className="container-x text-center">
           <p className="text-sm text-muted-foreground mb-6">
-            {isAr ? "الكتالوج الكامل بالتركيبات ومعدلات الاستخدام (PDF)" : "Full catalogue with compositions and dosage rates (PDF)"}
+            {isAr
+              ? "الكتالوج الكامل بالتركيبات ومعدلات الاستخدام (PDF)"
+              : "Full catalogue with compositions and dosage rates (PDF)"}
           </p>
           <a
             href={catalogAsset.url}

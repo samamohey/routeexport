@@ -21,7 +21,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Egyptian Stone Exporter | Route Export" },
       {
         property: "og:description",
-        content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
+        content:
+          "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://routeexport.lovable.app/" },
@@ -119,9 +120,13 @@ function HomePage() {
             <span className="badge-gold">{t("brand.tagline")}</span>
             <h1 className="mt-6 font-display text-5xl md:text-7xl leading-[1.05] tracking-tight">
               {isAr ? (
-                <>حجارة مصر <span className="text-gradient-gold">إلى العالم.</span></>
+                <>
+                  حجارة مصر <span className="text-gradient-gold">إلى العالم.</span>
+                </>
               ) : (
-                <>Egyptian stone, <span className="text-gradient-gold">exported worldwide.</span></>
+                <>
+                  Egyptian stone, <span className="text-gradient-gold">exported worldwide.</span>
+                </>
               )}
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
@@ -130,11 +135,17 @@ function HomePage() {
                 : "A registered Egyptian export house delivering hand-picked building surfaces — marble slab alternatives, raw quartz aggregate, and engineered quartz slabs — to clients across the globe."}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Link to="/categories" className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition">
+              <Link
+                to="/categories"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-primary/90 transition"
+              >
                 {t("cta.explore")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
               </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-6 py-3 text-sm hover:bg-primary/5 transition">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-6 py-3 text-sm hover:bg-primary/5 transition"
+              >
                 {t("cta.contact")}
               </Link>
             </div>
@@ -152,7 +163,9 @@ function HomePage() {
               >
                 <s.icon className="h-5 w-5 text-gold shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground">{s.label}</div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                    {s.label}
+                  </div>
                   <div className="font-display text-2xl mt-1">{s.value}</div>
                 </div>
               </motion.div>
@@ -223,7 +236,9 @@ function HomePage() {
           <div>
             <span className="text-xs uppercase tracking-[0.22em] text-gold">Why Route Export</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl text-cream">
-              {isAr ? "شركة مصرية موثوقة تُصدّر بمعايير عالمية." : "A trusted Egyptian house exporting to global standards."}
+              {isAr
+                ? "شركة مصرية موثوقة تُصدّر بمعايير عالمية."
+                : "A trusted Egyptian house exporting to global standards."}
             </h2>
             <p className="mt-6 text-cream/70 leading-relaxed">
               {isAr
@@ -233,7 +248,9 @@ function HomePage() {
             <ul className="mt-8 space-y-3 text-sm text-cream/80">
               {[
                 isAr ? "شهادات المنشأ ومطابقة المواصفات" : "Certificates of origin & conformity",
-                isAr ? "فحص ما قبل الشحن (Pre-shipment inspection)" : "Independent pre-shipment inspection",
+                isAr
+                  ? "فحص ما قبل الشحن (Pre-shipment inspection)"
+                  : "Independent pre-shipment inspection",
                 isAr ? "شحن FOB / CIF إلى معظم الموانئ" : "FOB / CIF shipping to most seaports",
                 isAr ? "دعم متعدد اللغات لعملاء التصدير" : "Multilingual export desk",
               ].map((line) => (
@@ -245,9 +262,19 @@ function HomePage() {
             </ul>
           </div>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <img src={factory} alt="Route Export factory floor in Cairo, Egypt" width={800} height={1000} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+            <img
+              src={factory}
+              alt="Route Export factory floor in Cairo, Egypt"
+              width={800}
+              height={1000}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
             <div className="absolute inset-x-6 bottom-6 bg-cream/95 text-ink rounded-xl p-5">
-              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Facility</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                Facility
+              </div>
               <div className="font-display text-xl mt-1">Cairo · Egypt</div>
             </div>
           </div>

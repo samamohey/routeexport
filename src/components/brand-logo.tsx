@@ -20,7 +20,6 @@ export function BrandLogo({ className }: BrandLogoProps) {
           <stop offset="0%" stopColor="var(--gold-soft)" />
           <stop offset="55%" stopColor="var(--gold)" />
           <stop offset="100%" stopColor="var(--gold)" />
-
         </linearGradient>
       </defs>
 

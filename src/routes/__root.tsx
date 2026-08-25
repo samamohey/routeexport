@@ -15,6 +15,7 @@ import { Toaster } from "sonner";
 import { I18nProvider } from "@/lib/i18n";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { Analytics } from "@vercel/analytics/react";
 
 function NotFoundComponent() {
   return (
@@ -26,7 +27,10 @@ function NotFoundComponent() {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground hover:bg-primary/90 transition">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground hover:bg-primary/90 transition"
+          >
             Go home
           </Link>
         </div>
@@ -51,12 +55,18 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full bg-primary px-5 py-2 text-sm text-primary-foreground hover:bg-primary/90"
           >
             Try again
           </button>
-          <a href="/" className="rounded-full border border-input bg-background px-5 py-2 text-sm hover:bg-accent hover:text-accent-foreground">
+          <a
+            href="/"
+            className="rounded-full border border-input bg-background px-5 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
+          >
             Go home
           </a>
         </div>
@@ -78,10 +88,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Egyptian Stone Exporter | Route Export" },
       { property: "og:title", content: "Egyptian Stone Exporter | Route Export" },
       { name: "twitter:title", content: "Egyptian Stone Exporter | Route Export" },
-      { name: "description", content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide." },
-      { property: "og:description", content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide." },
-      { name: "twitter:description", content: "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide." },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      {
+        name: "description",
+        content:
+          "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
+      },
+      {
+        property: "og:description",
+        content:
+          "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Registered Egyptian exporter of marble alternatives, raw quartz, and engineered quartz slabs. FOB/CIF worldwide.",
+      },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
 
       { name: "google-site-verification", content: "Pi8WKYfnHMrX72x6XaXyiuTD8hKqnEEqAT0Dy6649Rs" },
     ],
@@ -89,7 +114,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Tajawal:wght@400;500;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Tajawal:wght@400;500;700&display=swap",
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "alternate", hrefLang: "en", href: "https://routeexport.lovable.app/" },
       { rel: "alternate", hrefLang: "ar", href: "https://routeexport.lovable.app/" },
@@ -132,8 +160,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }
@@ -151,10 +184,13 @@ function RootComponent() {
             Skip to content
           </a>
           <SiteHeader />
-          <main id="main-content" className="flex-1"><Outlet /></main>
+          <main id="main-content" className="flex-1">
+            <Outlet />
+          </main>
           <SiteFooter />
           <Toaster position="top-center" />
         </div>
+        <Analytics />
       </I18nProvider>
     </QueryClientProvider>
   );
